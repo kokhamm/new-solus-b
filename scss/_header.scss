@@ -1,0 +1,96 @@
+
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    &__container{
+        max-width: 136rem;
+        margin: 0 auto;
+    }
+    &__wrap{
+        padding: 3rem 0;
+        align-items: center;
+    }
+    &__nav{
+        display: flex;
+        gap: 6rem;
+        align-items: center;
+    }
+    &__link{
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: 0.08rem;
+        text-align: center;
+        transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        position: relative;
+        &::before{
+            content: '';
+            width: 0%;
+            z-index: -1;
+            height: 2rem;
+            border-radius: 3rem;
+            background-color: #424242;
+            // opacity: 0.25;
+            // filter: blur(50px);
+            // -webkit-filter: blur(50px);
+            position: absolute;
+            bottom: -0.7rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+    
+        &:nth-child(3){
+            color: #FFC500;
+            &::before{
+                background-color: #513e00;
+            }
+            // &:hover{
+            //     &::before{
+            //         width: 100%;
+            //     }
+            // }
+        }
+    
+        &:hover{
+            &::before{
+                width: 100%;
+                padding: 1rem 2rem;
+            }
+        }
+    }    
+    &__button{
+        color: #FFC500;
+        font-size: 1.5rem;
+        line-height: 100%;
+        padding: 1.2rem 4rem;
+        border-radius: 2rem;
+        border: 1px solid #FFC500;
+        position: relative;
+        overflow: hidden;
+        transition: 0.8s;
+        cursor: pointer;
+        &::before{
+            content: url('../assets/images/bn-d-header-calendar-icon.svg');
+            top: 50%;
+            left: 0;
+            width: 3.5rem;
+            height: 3.5rem;
+            position: absolute;
+            transform: translateX(22rem) translateY(-50%);
+            transition: 0.7s;
+        }
+        &:hover{
+            &::before{
+                transform: translateX(18.2rem) translateY(-50%);
+                z-index: -1;
+            }
+            padding-left: 2.3rem;
+            padding-right: 5.7rem;
+        }
+    }
+}

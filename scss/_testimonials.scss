@@ -1,0 +1,87 @@
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.mySwiper{
+    padding-bottom: 5rem;
+    .swiper-slide {
+        border-radius: 1rem;
+        background: url('../project-to-webp/bn-d-testimonials-card-bg.svg') no-repeat center,
+        linear-gradient(315deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.10) 100%);
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 40rem;
+        height: 40rem;
+    }
+}
+
+.swiper-pagination-bullet{
+    border: 1px solid #FFC500;
+    opacity: 1;
+    height: 1.2rem;
+    width: 1.2rem;
+}
+.swiper-pagination-bullet-active{
+    background: #FFC500;
+}
+
+.mySwiper__slide-header{
+    font-weight: 400;
+    line-height: 130%;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+.mySwiper__slide-subheader{
+    color: #FFC500;
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+}
+
+.mySwiper__slide-link{
+    border-radius: 0.6rem;
+    border: 1px solid #FFF;
+    padding: 2rem;
+    text-align: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonials{
+    &__wrap{
+        padding: 12rem 0;
+        flex-direction: column;
+    }
+    &__head{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+    &__upheader{
+        color: #808080;
+        text-align: center;
+        font-size: 2.5rem;
+        letter-spacing: 0.5rem;
+        text-transform: uppercase;
+    }
+    &__header{
+        text-align: center;
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 110%;
+        max-width: 81rem;
+        margin-bottom: 8rem;
+    }
+}

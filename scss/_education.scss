@@ -1,0 +1,51 @@
+
+.education{
+    &__wrap{
+        padding: 12rem 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__books{
+        img{
+            max-width: 70rem;
+            position: absolute;
+            top: 50%;
+            transform: translate(-20%, -50%);
+        }
+    }
+    &__wrapper{
+        position: relative;
+        padding: 6rem;
+        border-radius: 2rem;
+        background: linear-gradient(270deg, #192332 0%, rgba(25, 35, 50, 0.00) 100%);
+    }
+    &__head{
+        text-align: center;
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 110%;
+        text-transform: uppercase;
+        margin-bottom: 8rem;
+    }
+    &__body{
+        max-width: 51rem;
+        &-header{
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+        &-subheader{
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 120%;
+            margin-bottom: 4rem;
+        }
+        &-link{
+            color: #FFC500;
+            text-decoration-line: underline;
+            display: flex;
+            gap: 1.2rem;
+            align-items: center;
+        }
+    }
+}

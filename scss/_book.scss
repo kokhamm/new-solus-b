@@ -1,0 +1,52 @@
+
+.book{
+    &__wrap{
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12rem 0;
+    }
+    &__left{
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    &__head{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    &__header{
+        font-size: 6rem;
+        font-weight: 700;
+    }
+    &__subheader{
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    &__explain{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    &__item{
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        border-radius: 0.6rem;
+        background: linear-gradient(270deg, rgba(25, 35, 50, 0.00) 0%, #192332 100%);
+        p{
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    }
+    &__right{
+        border-radius: 2rem;
+        overflow: hidden;
+    }
+}
+.calendly-inline-widget{
+    min-width: 50rem !important;
+    height: 50rem !important;
+}

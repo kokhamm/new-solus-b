@@ -1,0 +1,35 @@
+
+.cta{
+    &__wrap{
+        padding: 12rem 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__header{
+        color: #FCC501;
+        text-align: center;
+        font-size: 8rem;
+        font-weight: 800;
+        line-height: 120%;
+        letter-spacing: 0.24rem;
+        max-width: 59rem;
+        text-transform: uppercase;
+        margin-bottom: 4rem;
+    }
+    &__subheader{
+        text-align: center;
+        font-size: 2.4rem;
+        max-width: 59rem;
+        margin-bottom: 8rem;
+    }
+    &__link{
+        padding: 1.2rem 4rem;
+        border-radius: 0.6rem;
+        background: #FFC500;
+        color: #000;
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 130%;
+    }
+}
