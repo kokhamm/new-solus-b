@@ -1,9 +1,38 @@
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;  /* to ensure it's above the popup background but below the iframe */
+}
 .hero{
     background: url('../assets/images/bn-d-hero-bg.webp') no-repeat center;
     background-size: cover;
     &__wrap{
         height: 100vh;
+    }
+    &__video{
+        cursor: pointer;
+    }
+    &__iframe{
+        z-index: 2;
+        overflow: hidden;
+    }
+    &__popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.5s;
+        opacity: 0;
+        z-index: 199;
     }
     &__core{
         display: flex;
@@ -67,13 +96,16 @@
         0%{
             transform: scale(1);
         }
+        50%{
+            transform: scale(1.3) rotate(-180deg);
+        }
         100%{
-            transform: scale(1) rotate(360deg);
+            transform: scale(1) rotate(-360deg);
         }
     }
     @keyframes parts {
         0%{
-            transform: scale(0) rotate(45deg);
+            transform: scale(0.1) rotate(180deg);
         }
         100%{
             transform: scale(1);
@@ -110,6 +142,20 @@
         gap: 1rem;
     }
     &__book{
+        transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        cursor: pointer;
+        &:hover{
+            // gap: 1.5rem;
+            transform: scale(1.05);
+            margin-right: 1rem;
+            svg{
+                transform: rotate(90deg) scale(1.1);
+            }
+        }
+        svg{
+            transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+            transform: rotate(45deg)
+        }
         p{
             color: #080B11;
             font-size: 2rem;
@@ -126,12 +172,42 @@
         border-radius: 3rem;
         padding: 1.3rem 3rem;
         display: flex;
+        transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
         align-items: center;
         gap: 1.2rem;
         border: 1px solid #FFC500;
         p{
             font-size: 2rem;
+            transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
             line-height: 100%;
+        }
+        &:hover{
+            border: 1px solid white;
+            background-color: white;
+            p{
+                color: #282828;
+            }
+            svg path {
+                fill: #FF0000;
+            }
+        }
+    }
+}
+@media (max-width:1100px) {
+    .hero{
+        &__core{
+            display: none;
+        }
+        &__header{
+            font-size: 3.2rem;
+        }
+        &__subheader{
+            font-size: 1.6rem;
+            line-height: 100%;
+        }
+        &__bottom{
+            flex-direction: column;
+            align-items: flex-start;
         }
     }
 }

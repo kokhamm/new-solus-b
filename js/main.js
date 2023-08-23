@@ -34,6 +34,43 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+    const heroCoreParts = document.querySelectorAll('.hero__core-part');
+    
+    heroCoreParts.forEach(part => {
+        part.addEventListener('animationend', (e) => {
+            if (e.animationName === 'parts') {
+                part.style.animation = 'partsI 30s ease-in-out infinite';
+            }
+        });
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+    
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    document.querySelector('.toggle').addEventListener('click', function(event) {
+        event.stopPropagation();
+    
+        // Toggle 'on' class for '.header__mobile'
+        var headerMobile = document.querySelector('.header__mobile');
+        if (headerMobile.classList.contains('on')) {
+            headerMobile.classList.remove('on');
+        } else {
+            headerMobile.classList.add('on');
+        }
+    
+        // Toggle 'stopper' class for 'body'
+        var body = document.querySelector('body');
+        if (body.classList.contains('stopper')) {
+            body.classList.remove('stopper');
+        } else {
+            body.classList.add('stopper');
+        }
+    });
 });
 var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
@@ -63,3 +100,92 @@ var swiper2 = new Swiper(".mySwiperTwo", {
   slideToClickedSlide: true,
   loop: true,
 })
+
+var delay = 300; // 0.5 seconds
+var timer;
+var elements = document.querySelectorAll('.education__book');
+var bookOne = document.querySelector('.education__book-one');
+var bookTwo = document.querySelector('.education__book-two');
+var blocks = document.querySelectorAll('.education__block');
+
+function resetAnimations() {
+    bookOne.style.animation = '';
+    bookTwo.style.animation = '';
+}
+
+elements.forEach(function(elem) {
+    elem.addEventListener('mouseenter', function() {
+        clearTimeout(timer); // Clear any existing timer
+
+        if (!elem.classList.contains('education__book-active')) {
+            bookOne.style.animation = 'book-left 0.6s ease-in-out forwards';
+            bookTwo.style.animation = 'book-right 0.6s ease-in-out forwards';
+
+            setTimeout(function() {
+                resetAnimations();
+            }, 600);
+        }
+
+        // Define the currently hovered element for reference in the timeout function
+        var hoveredElem = this;
+
+        timer = setTimeout(function() {
+            // Remove active class from all elements
+            elements.forEach(function(innerElem) {
+                innerElem.classList.remove('education__book-active');
+            });
+
+            // Add active class to the hovered element
+            hoveredElem.classList.add('education__book-active');
+        }, delay);
+    });
+
+    elem.addEventListener('mouseleave', function() {
+        // When the mouse leaves, just clear the timer
+        // Don't reset animations immediately; let the process complete
+        clearTimeout(timer);
+    });
+});
+bookOne.addEventListener('mouseenter', function() {
+  // Remove active class from all blocks
+  blocks.forEach(function(block) {
+      block.classList.remove('education__block-active');
+  });
+  
+  // Add active class to the first block
+  blocks[0].classList.add('education__block-active');
+});
+
+bookTwo.addEventListener('mouseenter', function() {
+  // Remove active class from all blocks
+  blocks.forEach(function(block) {
+      block.classList.remove('education__block-active');
+  });
+  
+  // Add active class to the second block
+  blocks[1].classList.add('education__block-active');
+});
+
+const heroVideo = document.querySelector('.hero__video');
+const heroPopup = document.getElementById('hero__popup');
+
+heroVideo.addEventListener('click', function() {
+    heroPopup.style.display = 'flex';  // Display the popup
+    setTimeout(() => heroPopup.style.opacity = '1', 50);  // Fade in the popup with a slight delay
+});
+
+heroPopup.addEventListener('click', function(event) {
+    // If the clicked target is the popup wrapper (not the content inside), close the popup
+    if(event.target === heroPopup) {
+        heroPopup.style.opacity = '0';  // Fade out the popup
+        setTimeout(() => heroPopup.style.display = 'none', 500);  // Hide the popup after fade out transition
+    }
+});
+const overlay = document.querySelector('.overlay');
+
+overlay.addEventListener('click', function() {
+    heroPopup.style.opacity = '0';  // Fade out the popup
+    setTimeout(() => heroPopup.style.display = 'none', 500);  // Hide the popup after fade out transition
+});
+
+

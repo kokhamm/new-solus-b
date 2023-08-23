@@ -1,5 +1,20 @@
 
 .cases{
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 24rem;
+        top: 80rem;
+        height: 53rem;
+        left: 0;
+        background: url('../assets/images/bn-d-cases-vector.webp') no-repeat;
+        background-size: contain;
+        filter: blur(200px);
+        -webkit-filter: blur(200px);
+        transform: translate3d(0, 0, 0);
+        z-index: -1;
+    }
     &__wrap{
         padding: 12rem 0;
         flex-direction: column;
@@ -57,5 +72,20 @@
         display: flex;
         align-items: center;
         gap: 1.2rem;
+        transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+}
+@media (max-width:1100px) {
+    .cases{
+        &__header{
+            font-size: 2.4rem;
+        }
+        &__naming{
+            font-size: 1.8rem;
+        }
+        &__items{
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }

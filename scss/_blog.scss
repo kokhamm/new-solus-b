@@ -1,0 +1,99 @@
+.blog{
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 55rem;
+        top: 20rem;
+        height: 66rem;
+        left: 0;
+        background: url('../assets/images/bn-d-blog-vector.webp') no-repeat;
+        background-size: contain;
+        filter: blur(200px);
+        -webkit-filter: blur(200px);
+        transform: translate3d(0, 0, 0);
+        z-index: -1;
+    }
+    &__wrap{
+        padding: 12rem 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 8rem;
+    }
+    &__head{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 100rem;
+    }
+    &__header{
+        color: #808080;
+        text-align: center;
+        font-size: 5rem;
+        letter-spacing: 1rem;
+        text-transform: uppercase;
+    }
+    &__body{
+        display: flex;
+        justify-content: center;
+    }
+    a{
+        img{
+            transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        &:hover{
+            img{
+                transform: translateY(-1.5rem);
+            }
+        }
+        &:nth-child(1),
+        &:nth-child(2){
+            padding-right: 4rem;
+            border-right: 1px solid #43536D;
+        }
+        &:nth-child(2),
+        &:nth-child(3){
+            padding-left: 4rem;
+        }
+    }
+    &__item{
+        max-width: 32rem;
+        box-sizing: initial;
+        display: flex;
+        flex-direction: column;
+        img{
+            margin-bottom: 2rem;
+            border-radius: 2rem;
+        }
+        &-name{
+            font-size: 2.5rem;
+            line-height: 120%;
+            margin-bottom: 4rem;
+        }
+        &-bottom{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &-left,
+            &-right{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                p{
+                    color: #43536D;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    &__link{
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        color: #FFC500;
+        text-decoration-line: underline;
+        border-right: none !important;
+        padding: 0 !important;
+    }
+}

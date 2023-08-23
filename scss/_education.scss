@@ -5,19 +5,52 @@
         flex-direction: column;
         align-items: center;
     }
-    &__books{
-        img{
-            max-width: 70rem;
-            position: absolute;
-            top: 50%;
-            transform: translate(-20%, -50%);
-        }
+
+    &__book-one{
+        max-width: 25rem;
+        position: absolute;
+        z-index: 15;
+        top: 45%;
+        transform: translate(0%, -50%) rotate(5deg);
+        transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        cursor: pointer;
+    }
+    &__book-two{
+        max-width: 25rem;
+        position: absolute;
+        z-index: 15;
+        top: 45%;
+        transform: translate(84%, -50%) rotate(5deg);
+        transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        cursor: pointer;
+    }
+    &__book-active{
+        z-index: 16;
     }
     &__wrapper{
         position: relative;
         padding: 6rem;
+        min-height: 32rem;
         border-radius: 2rem;
         background: linear-gradient(270deg, #192332 0%, rgba(25, 35, 50, 0.00) 100%);
+    }
+    &__block{
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        pointer-events: none;
+        right: 0;
+        max-width: 51rem;
+        transition: 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-right: 6rem;
+        height: 100%;
+        &.education__block-active{
+            opacity: 1;
+            pointer-events: all;
+        }
     }
     &__head{
         text-align: center;
@@ -28,7 +61,6 @@
         margin-bottom: 8rem;
     }
     &__body{
-        max-width: 51rem;
         &-header{
             font-size: 3rem;
             font-weight: 700;
@@ -47,5 +79,27 @@
             gap: 1.2rem;
             align-items: center;
         }
+    }
+}
+@keyframes book-left {
+    0%{
+        transform: translate(0%, -50%) rotate(5deg);
+    }
+    50%{
+        transform: translate(-20%, -50%) rotate(5deg);
+    }
+    100%{
+        transform: translate(0%, -50%) rotate(5deg);
+    }
+}
+@keyframes book-right {
+    0%{
+        transform: translate(84%, -50%) rotate(5deg);
+    }
+    50%{
+        transform: translate(100%, -50%) rotate(5deg);
+    }
+    100%{
+        transform: translate(84%, -50%) rotate(5deg);
     }
 }

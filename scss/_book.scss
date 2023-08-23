@@ -1,10 +1,50 @@
 
 .book{
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 55rem;
+        top: 20rem;
+        height: 45rem;
+        right: 0;
+        background: url('../assets/images/bn-d-footer-vector.webp') no-repeat;
+        background-size: contain;
+        filter: blur(200px);
+        -webkit-filter: blur(200px);
+        transform: translate3d(0, 0, 0);
+        z-index: -1;
+    }
+    &__top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        &-upheader{
+            color: #808080;
+            text-align: center;
+            font-size: 2.5rem;
+            letter-spacing: 0.5rem;
+            text-transform: uppercase;
+        }
+        &-header{
+            text-align: center;
+            font-size: 5rem;
+            font-weight: 700;
+            line-height: 110%;
+        }
+    }
     &__wrap{
+        flex-direction: column;
+        align-items: center;
+        gap: 8rem;
+        padding: 12rem 0;
+    }
+    &__middle{
         width: 100%;
+        display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 12rem 0;
     }
     &__left{
         display: flex;

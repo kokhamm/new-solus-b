@@ -14,15 +14,63 @@
                 <div class="header__logo">
                     <img src="assets/images/bn-d-header-logo.svg" alt="logotype">
                 </div>
-                <nav class="header__nav">
-                    <a class="header__link" href="#company">Company</a>
+                <nav class="header__nav desk">
                     <a class="header__link" href="#services">Services</a>
                     <a class="header__link" href="#solutions">Solutions</a>
+                    <a class="header__link" href="#cases">Cases</a>
                     <a class="header__link" href="#blog" target="_blank">Blog</a>
                     <!-- <a class="header__link" href="#blog" target="_blank">Partner with us</a> -->
                 </nav>
-                <div class="header__button">
-                    Book Expert Session
+                <a href="#book" class="desk">
+                    <div class="header__button">
+                        Book Expert Session
+                    </div>
+                </a>
+                <div  class="header__burger mob" id="mobBurger">
+                    <input type="checkbox" id="checkbox">
+                        <label for="checkbox" class="toggle">
+                        <div class="bars" id="bar1"></div>
+                        <div class="bars" id="bar2"></div>
+                        <div class="bars" id="bar3"></div>
+                    </label>
+                </div>
+                <div class="header__mobile mob">
+                    <nav class="header__nav">
+                        <ul class="header__list">
+                            <li class="header__li">
+                                <a href="#home" class="header__link anchor__link anchor__link-mob">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="header__li">
+                                <a href="#features" class="header__link anchor__link anchor__link-mob">
+                                    Features
+                                </a>
+                            </li>
+                            <li class="header__li">
+                                <a href="#uFeatures" class="header__link anchor__link anchor__link-mob">
+                                    Upcoming Features
+                                </a>
+                            </li>
+                            <li class="header__li">
+                                <a href="#testimonials" class="header__link anchor__link anchor__link-mob">
+                                    Testimonials
+                                </a>
+                            </li>
+                            <li class="header__li">
+                                <a href="#faq" class="header__link anchor__link anchor__link-mob">
+                                    Knowledge<span class="font__regular">(</span>FAQ<span class="font__regular">)</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__button-block">
+                        <a href="#cta" title="Get early access" class="header__button anchor__link anchor__link-mob">
+                            <span class="header__cover">
+                                Early access<span class="font__regular">!</span>
+                            </span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -41,13 +89,15 @@
                             </p>
                         </div>
                         <div class="hero__bottom">
-                            <div class="hero__book">
-                                <p>Book A Call</p>
-                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 7L0 7" stroke="#080B11" stroke-width="2" stroke-linejoin="round"/>
-                                    <path d="M6 1L12 7L6 13" stroke="#080B11" stroke-width="2"/>
-                                </svg>
-                            </div>
+                            <a href="#book">
+                                <div class="hero__book">
+                                    <p>Book A Call</p>
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 7L0 7" stroke="#080B11" stroke-width="2" stroke-linejoin="round"/>
+                                        <path d="M6 1L12 7L6 13" stroke="#080B11" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                            </a>
                             <div class="hero__video">
                                 <p>Watch us in action</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
@@ -68,6 +118,11 @@
                         <img class="hero__core-part hero__core-part8" src="assets/images/part8.webp" alt="part">
                         <img class="hero__core-part hero__core-particles" src="assets/images/Particles.webp" alt="part">
                     </div>
+                    <div class="hero__popup" id="hero__popup">
+                        <div class="hero__iframe">
+                            <iframe width="840" height="473" src="https://www.youtube-nocookie.com/embed/N7D075cNhv4?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -81,27 +136,75 @@
                         </h2>
                     </div>
                     <div class="clients__body">
-                        <img src="assets/images/bn-d-clients-1.svg" alt="client">
-                        <img src="assets/images/bn-d-clients-2.svg" alt="client">
-                        <img src="assets/images/bn-d-clients-3.svg" alt="client">
-                        <img src="assets/images/bn-d-clients-4.svg" alt="client">
-                        <img src="assets/images/bn-d-clients-5.svg" alt="client">
-                        <img src="assets/images/bn-d-clients-6.svg" alt="client">
-                        <img src="assets/images/bn-d-clients-7.svg" alt="client">
-                        <img src="assets/images/bn-d-clients-8.svg" alt="client">
-                        <img src="assets/images/bn-d-clients-9.svg" alt="client">
-                        <img src="assets/images/bn-d-clients-10.svg" alt="client">
-                        <img src="assets/images/bn-d-clients-11.svg" alt="client">
-                        <img src="assets/images/bn-d-clients-12.svg" alt="client">
-                        <img src="assets/images/bn-d-clients-13.svg" alt="client">
-                        <img src="assets/images/bn-d-clients-14.svg" alt="client">
-                        <img src="assets/images/bn-d-clients-15.svg" alt="client">
-                        <img src="assets/images/bn-d-clients-16.svg" alt="client">
+                        <a href="https://global.xena.exchange/en/" target="_blank">
+                            <img src="assets/images/bn-d-clients-1.svg" alt="client">
+                            <img src="assets/images/bn-d-clients-overlay-1.svg" alt="client">
+                        </a>
+                        <a href="https://www.humanprotocol.org/" target="_blank">
+                            <img src="assets/images/bn-d-clients-2.svg" alt="client">
+                            <img src="assets/images/bn-d-clients-overlay-6.svg" alt="client">
+                        </a>
+                        <a href="https://hacken.io/" target="_blank">
+                            <img src="assets/images/bn-d-clients-3.svg" alt="client">
+                            <img src="assets/images/bn-d-clients-overlay-11.svg" alt="client">
+                        </a>
+                        <a href="https://waves.tech/" target="_blank">
+                            <img src="assets/images/bn-d-clients-4.svg" alt="client">
+                            <img src="assets/images/bn-d-clients-overlay-13.svg" alt="client">
+                        </a>
+                        <a href="https://www.synesis.one/" target="_blank">
+                            <img src="assets/images/bn-d-clients-5.svg" alt="client">
+                            <img src="assets/images/bn-d-clients-overlay-2.svg" alt="client">
+                        </a>
+                        <a href="https://cindicator.com/" target="_blank">
+                            <img src="assets/images/bn-d-clients-6.svg" alt="client">
+                            <img src="assets/images/bn-d-clients-overlay-7.svg" alt="client">
+                        </a>
+                        <a href="https://global.xena.exchange/en/" target="_blank">
+                            <img src="assets/images/bn-d-clients-7.svg" alt="client">
+                            <img src="assets/images/bn-d-clients-overlay-12.svg" alt="client">
+                        </a>
+                        <a href="https://tidex.com/" target="_blank">
+                            <img src="assets/images/bn-d-clients-8.svg" alt="client">
+                            <img src="assets/images/bn-d-clients-overlay-10.svg" alt="client">
+                        </a>
+                        <a href="https://corite.com/" target="_blank">
+                            <img src="assets/images/bn-d-clients-9.svg" alt="client">
+                            <img src="assets/images/bn-d-clients-overlay-3.svg" alt="client">
+                        </a>
+                        <a href="https://laborx.com/" target="_blank">
+                            <img src="assets/images/bn-d-clients-10.svg" alt="client">
+                            <img src="assets/images/bn-d-clients-overlay-8.svg" alt="client">
+                        </a>
+                        <a href="https://www.cirusfoundation.com/" target="_blank">
+                            <img src="assets/images/bn-d-clients-11.svg" alt="client">
+                            <img src="assets/images/bn-d-clients-overlay-16.svg" alt="client">
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="assets/images/bn-d-clients-12.svg" alt="client">
+                            <img src="assets/images/bn-d-clients-overlay-15.svg" alt="client">
+                        </a>
+                        <a href="https://v2.vires.finance/" target="_blank">
+                            <img src="assets/images/bn-d-clients-13.svg" alt="client">
+                            <img src="assets/images/bn-d-clients-overlay-4.svg" alt="client">
+                        </a>
+                        <a href="https://www.xdao.app/" target="_blank">
+                            <img src="assets/images/bn-d-clients-14.svg" alt="client">
+                            <img src="assets/images/bn-d-clients-overlay-9.svg" alt="client">
+                        </a>
+                        <a href="https://emcd.io/pool/" target="_blank">
+                            <img src="assets/images/bn-d-clients-15.svg" alt="client">
+                            <img src="assets/images/bn-d-clients-overlay-5.svg" alt="client">
+                        </a>
+                        <a href="https://skylaunch.finance/" target="_blank">
+                            <img src="assets/images/bn-d-clients-16.svg" alt="client">
+                            <img src="assets/images/bn-d-clients-overlay-14.svg" alt="client">
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="cases">
+        <section class="cases" id="cases">
             <div class="cases__container-m">
                 <div class="cases__container">
                     <div class="cases__wrap">
@@ -130,7 +233,7 @@
                                         </p>
                                     </div>
                                     <div class="cases__link-block">
-                                        <a class="cases__link" href="" target="_blank">
+                                        <a class="cases__link" href="https://b.solus.agency/how-to-attract-c-level-%d1%81rypto-executives-to-your-product-not-for-all-the-money-in-the-world/" target="_blank">
                                             Read More
                                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M10 6L0 6" stroke="#FFC500" stroke-width="2" stroke-linejoin="round"/>
@@ -152,7 +255,7 @@
                                         </p>
                                     </div>
                                     <div class="cases__link-block">
-                                        <a class="cases__link" href="" target="_blank">
+                                        <a class="cases__link" href="https://b.solus.agency/how-to-gather-a-community-with-50000-members-for-a-travel-start-up-during-an-epidemic-and-not-to-screw-up/" target="_blank">
                                             Read More
                                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M10 6L0 6" stroke="#FFC500" stroke-width="2" stroke-linejoin="round"/>
@@ -174,7 +277,7 @@
                                         </p>
                                     </div>
                                     <div class="cases__link-block">
-                                        <a class="cases__link" href="" target="_blank">
+                                        <a class="cases__link" href="https://b.solus.agency/how-to-attract-hedge-funds-and-trading-desks-to-a-derivatives-exchange-or-b2b-hard-core/" target="_blank">
                                             Read More
                                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M10 6L0 6" stroke="#FFC500" stroke-width="2" stroke-linejoin="round"/>
@@ -198,7 +301,7 @@
                                         </p>
                                     </div>
                                     <div class="cases__link-block">
-                                        <a class="cases__link" href="" target="_blank">
+                                        <a class="cases__link" href="https://b.solus.agency/a-few-ways-to-introduce-a-new-crypto-product-to-the-world/" target="_blank">
                                             Read More
                                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M10 6L0 6" stroke="#FFC500" stroke-width="2" stroke-linejoin="round"/>
@@ -220,7 +323,7 @@
                                         </p>
                                     </div>
                                     <div class="cases__link-block">
-                                        <a class="cases__link" href="" target="_blank">
+                                        <a class="cases__link" href="https://b.solus.agency/the-formula-of-product-market-fit-search-for-a-pioneering-mining-product-case-emcd/" target="_blank">
                                             Read More
                                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M10 6L0 6" stroke="#FFC500" stroke-width="2" stroke-linejoin="round"/>
@@ -242,7 +345,7 @@
                                         </p>
                                     </div>
                                     <div class="cases__link-block">
-                                        <a class="cases__link" href="" target="_blank">
+                                        <a class="cases__link" href="https://b.solus.agency/how-we-restrained-alameda-research-by-doing-marketing-vires-case/" target="_blank">
                                             Read More
                                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M10 6L0 6" stroke="#FFC500" stroke-width="2" stroke-linejoin="round"/>
@@ -257,59 +360,57 @@
                 </div>
             </div>
         </section>
-        <section class="services">
-            <div class="services__container-m">
+        <section class="services" id="services">
+            <div class="services__container-l">
                 <div class="services__wrap">
                     <div class="services__head">
-                        <div class="services__header">
-                            <h2 class="services__header">
-                                Our Expertise
-                            </h2>
-                        </div>
+                        <p class="services__upheader">
+                            Our Expertise
+                        </p>
+                        <h2 class="services__header">
+                            Discover Our Full-Spectrum Web 3 Marketing Offerings for Your Project!
+                        </h2>
                     </div>
                     <div class="services__body">
                         <div class="tabs">
-                            <button class="tab-button" data-tab="tab1">Strategy</button>
-                            <button class="tab-button" data-tab="tab2">PPC Campaigns</button>
-                            <button class="tab-button active" data-tab="tab3">B2B Outreach</button>
-                            <button class="tab-button" data-tab="tab4">KOL Marketing</button>
-                            <div class="tab-content" id="tab1">
+                            <button class="tab-button active" data-tab="tab1">All-in-one</button>
+                            <button class="tab-button" data-tab="tab2">Influence marketing</button>
+                            <button class="tab-button" data-tab="tab3">Paid Traffic</button>
+                            <button class="tab-button" data-tab="tab4">B2B relations building</button>
+                            <button class="tab-button" data-tab="tab5">B2B relations building</button>
+                            <div class="tab-content active" id="tab1">
                                 <div class="tab-content__wrapper">
                                     <div class="tab-content__preview">
-                                        <img src="assets/images/bn-d-services-preview-1.webp" alt="preview">
+                                        <img src="assets/images/bn-d-services-card-1.webp" alt="preview">
                                     </div>
                                     <div class="tab-content__body">
                                         <p class="tab-content__header">
-                                            B2B Outreach-1
+                                            All-in-one marketing solution
                                         </p>
                                         <p class="tab-content__subheader">
-                                            Blockchain project strategy is the only service that can't bring any results autonomously, no service will work without it.
+                                            From strategy creation to achieving significant milestones. Let your team care about the product, while we make the entire crypto world care about it.
                                         </p>
                                         <div class="tab-content__strokes">
                                             <div class="tab-content__stroke">
                                                 <p class="tab-content__strok">
-                                                    Marketing strategy
+                                                    Market & product audit
                                                 </p>
                                                 <p class="tab-content__strok">
-                                                    User Journey map
+                                                    Creation of a marketing strategy
                                                 </p>
                                             </div>
                                             <div class="tab-content__stroke">
                                                 <p class="tab-content__strok">
-                                                    Customer development
+                                                    Full-cycle strategy implementation
                                                 </p>
                                                 <p class="tab-content__strok">
-                                                    Hypotesis  testing
+                                                    Consulting on fields closed in-house
                                                 </p>
                                             </div>
                                         </div>
                                         <div class="tab-content__linking">
-                                            <a class="tab-content__link" href="" target="_blank">
-                                                Read More
-                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M10 6.5L0 6.5" stroke="#FFC500" stroke-width="2" stroke-linejoin="round"/>
-                                                    <path d="M5 1.5L10 6.5L5 11.5" stroke="#FFC500" stroke-width="2"/>
-                                                </svg>
+                                            <a class="tab-content__link" href="#book" target="_blank">
+                                                Get a Consultation
                                             </a>
                                         </div>
                                         
@@ -319,83 +420,72 @@
                             <div class="tab-content" id="tab2">
                                 <div class="tab-content__wrapper">
                                     <div class="tab-content__preview">
-                                        <img src="assets/images/bn-d-services-preview-1.webp" alt="preview">
+                                        <img src="assets/images/bn-d-services-card-2.webp" alt="preview">
                                     </div>
                                     <div class="tab-content__body">
                                         <p class="tab-content__header">
-                                            B2B Outreach-2
+                                            Influence marketing
                                         </p>
                                         <p class="tab-content__subheader">
-                                            Blockchain project strategy is the only service that can't bring any results autonomously, no service will work without it.
+                                            In the crypto world, where total mistrust reigns, key opinion leaders can ensure 100% reputability and safeguard your investment. We can help with the following:
                                         </p>
                                         <div class="tab-content__strokes">
                                             <div class="tab-content__stroke">
                                                 <p class="tab-content__strok">
-                                                    Marketing strategy
+                                                    Performance-oriented campaigns
                                                 </p>
                                                 <p class="tab-content__strok">
-                                                    User Journey map
+                                                    Ambassador board building
                                                 </p>
                                             </div>
                                             <div class="tab-content__stroke">
                                                 <p class="tab-content__strok">
-                                                    Customer development
+                                                    Allocation-based campaigns
                                                 </p>
                                                 <p class="tab-content__strok">
-                                                    Hypotesis  testing
+                                                    Special projects
                                                 </p>
                                             </div>
                                         </div>
                                         <div class="tab-content__linking">
-                                            <a class="tab-content__link" href="" target="_blank">
-                                                Read More
-                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M10 6.5L0 6.5" stroke="#FFC500" stroke-width="2" stroke-linejoin="round"/>
-                                                    <path d="M5 1.5L10 6.5L5 11.5" stroke="#FFC500" stroke-width="2"/>
-                                                </svg>
+                                            <a class="tab-content__link" href="#book" target="_blank">
+                                                Get a Consultation
                                             </a>
                                         </div>
                                         
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-content active" id="tab3">
+                            <div class="tab-content" id="tab3">
                                 <div class="tab-content__wrapper">
                                     <div class="tab-content__preview">
-                                        <img src="assets/images/bn-d-services-preview-1.webp" alt="preview">
+                                        <img src="assets/images/bn-d-services-card-3.webp" alt="preview">
                                     </div>
                                     <div class="tab-content__body">
                                         <p class="tab-content__header">
-                                            B2B Outreach-3
+                                            Paid traffic
                                         </p>
                                         <p class="tab-content__subheader">
-                                            Blockchain project strategy is the only service that can't bring any results autonomously, no service will work without it.
+                                            Brand awareness, dozens of posts from KOLs, and a high K-factor are good, but for sustainable business growth, exact numbers are needed. So let your KPIs be achieved.
                                         </p>
                                         <div class="tab-content__strokes">
                                             <div class="tab-content__stroke">
                                                 <p class="tab-content__strok">
-                                                    Marketing strategy
+                                                    PPC
                                                 </p>
                                                 <p class="tab-content__strok">
-                                                    User Journey map
+                                                    Media Buying
                                                 </p>
                                             </div>
                                             <div class="tab-content__stroke">
-                                                <p class="tab-content__strok">
-                                                    Customer development
-                                                </p>
-                                                <p class="tab-content__strok">
-                                                    Hypotesis  testing
+                                                <p class="tab-content__strok" style="padding-right: 0; border-right: none;">
+                                                    Custom combined solutions
                                                 </p>
                                             </div>
                                         </div>
                                         <div class="tab-content__linking">
-                                            <a class="tab-content__link" href="" target="_blank">
-                                                Read More
-                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M10 6.5L0 6.5" stroke="#FFC500" stroke-width="2" stroke-linejoin="round"/>
-                                                    <path d="M5 1.5L10 6.5L5 11.5" stroke="#FFC500" stroke-width="2"/>
-                                                </svg>
+                                            <a class="tab-content__link" href="#book" target="_blank">
+                                                Get a Consultation
                                             </a>
                                         </div>
                                         
@@ -405,40 +495,74 @@
                             <div class="tab-content" id="tab4">
                                 <div class="tab-content__wrapper">
                                     <div class="tab-content__preview">
-                                        <img src="assets/images/bn-d-services-preview-1.webp" alt="preview">
+                                        <img src="assets/images/bn-d-services-card-4.webp" alt="preview">
                                     </div>
                                     <div class="tab-content__body">
                                         <p class="tab-content__header">
-                                            B2B Outreach-4
+                                            B2B relations building
                                         </p>
                                         <p class="tab-content__subheader">
-                                            Blockchain project strategy is the only service that can't bring any results autonomously, no service will work without it.
+                                            A combination of customized cold outreach and connecting you with our network of 300+ blockchain companies is all you require for establishing a sustainable business in the B2B field.
                                         </p>
                                         <div class="tab-content__strokes">
                                             <div class="tab-content__stroke">
                                                 <p class="tab-content__strok">
-                                                    Marketing strategy
+                                                    LinkedIn/Email/Telegram/Twitter outreach
                                                 </p>
                                                 <p class="tab-content__strok">
-                                                    User Journey map
+                                                    Intros to our network
                                                 </p>
                                             </div>
                                             <div class="tab-content__stroke">
                                                 <p class="tab-content__strok">
-                                                    Customer development
+                                                    Account-based marketing style campaigns
                                                 </p>
                                                 <p class="tab-content__strok">
-                                                    Hypotesis  testing
+                                                    Investment raising
                                                 </p>
                                             </div>
                                         </div>
                                         <div class="tab-content__linking">
-                                            <a class="tab-content__link" href="" target="_blank">
-                                                Read More
-                                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M10 6.5L0 6.5" stroke="#FFC500" stroke-width="2" stroke-linejoin="round"/>
-                                                    <path d="M5 1.5L10 6.5L5 11.5" stroke="#FFC500" stroke-width="2"/>
-                                                </svg>
+                                            <a class="tab-content__link" href="#book" target="_blank">
+                                                Get a Consultation
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="tab5">
+                                <div class="tab-content__wrapper">
+                                    <div class="tab-content__preview">
+                                        <img src="assets/images/bn-d-services-card-5.webp" alt="preview">
+                                    </div>
+                                    <div class="tab-content__body">
+                                        <p class="tab-content__header">
+                                            Investment raising
+                                        </p>
+                                        <p class="tab-content__subheader">
+                                            We are not marketers, but Web 3 builders. So, in case you need resources to make Web 3 a better place by launching your project, our role is to connect you with gold mines.
+                                        </p>
+                                        <div class="tab-content__strokes">
+                                            <div class="tab-content__stroke">
+                                                <p class="tab-content__strok">
+                                                    Connecting with VCs/Advisors/Private equity funds
+                                                </p>
+                                                <p class="tab-content__strok">
+                                                    IR advisory
+                                                </p>
+                                            </div>
+                                            <div class="tab-content__stroke">
+                                                <p class="tab-content__strok">
+                                                    Preparation of pitch deck/whitepaper/litepapers
+                                                </p>
+                                                <p class="tab-content__strok">
+                                                    KOLs round closing
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content__linking">
+                                            <a class="tab-content__link" href="#book" target="_blank">
+                                                Get a Consultation
                                             </a>
                                         </div>
                                         
@@ -450,26 +574,28 @@
                 </div>
             </div>
         </section>
-        <section class="solutions">
+        <section class="solutions" id="solutions">
             <div class="solutions__container-l">
                 <div class="solutions__wrap">
                     <div class="solutions__head">
-                        <p class="solutions__upheader"></p>
+                        <p class="solutions__upheader">
+                            Use Cases
+                        </p>
                         <h2 class="solutions__header">
-                            How we can help to impove your bussiness
+                            Pick the perfect fit for your needs
                         </h2>
                     </div>
                     <div class="solutions__body">
                         <div class="solutions__col solutions__col-left">
                             <div class="solutions__item">
                                 <p class="solutions__item-header">
-                                    Discord
+                                    UKRAINIAN MARKET PENETRATION
                                 </p>
                                 <p class="solutions__item-subheader">
                                     Eager to conquer the countries with the biggest crypto potential? Start with Ukraine, 3rd country worldwide by crypto adoption.
                                 </p>
-                                <a class="solutions__item-link" href="" target="_blank">
-                                    Read More
+                                <a class="solutions__item-link" href="https://b.solus.agency/ukrainian-market-penetration/" target="_blank">
+                                    Conquer Now
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M9.99988 5.99902L-0.00012207 5.99902" stroke="#FFC500" stroke-width="2" stroke-linejoin="round"/>
                                         <path d="M4.99988 0.999023L9.99988 5.99902L4.99988 10.999" stroke="#FFC500" stroke-width="2"/>
@@ -478,13 +604,13 @@
                             </div>
                             <div class="solutions__item">
                                 <p class="solutions__item-header">
-                                    Token Growth
+                                    TOKEN GROWTH
                                 </p>
                                 <p class="solutions__item-subheader">
-                                    Eager to conquer the countries with the biggest crypto potential? Start with Ukraine, 3rd country worldwide by crypto adoption.
+                                    Want to mark all your token-oriented goals as done? We could help to achieve them honestly and organically.
                                 </p>
-                                <a class="solutions__item-link" href="" target="_blank">
-                                    Read More
+                                <a class="solutions__item-link" href="https://b.solus.agency/token-growth/" target="_blank">
+                                    Start Now
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M9.99988 5.99902L-0.00012207 5.99902" stroke="#FFC500" stroke-width="2" stroke-linejoin="round"/>
                                         <path d="M4.99988 0.999023L9.99988 5.99902L4.99988 10.999" stroke="#FFC500" stroke-width="2"/>
@@ -493,45 +619,13 @@
                             </div>
                             <div class="solutions__item">
                                 <p class="solutions__item-header">
-                                    Community Gathering
+                                    COMMUNITY GATHERING
                                 </p>
                                 <p class="solutions__item-subheader">
-                                    Eager to conquer the countries with the biggest crypto potential? Start with Ukraine, 3rd country worldwide by crypto adoption.
+                                    Want to boost the community or gather it from scratch? Receive predicted community growth with us.
                                 </p>
-                                <a class="solutions__item-link" href="" target="_blank">
-                                    Read More
-                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.99988 5.99902L-0.00012207 5.99902" stroke="#FFC500" stroke-width="2" stroke-linejoin="round"/>
-                                        <path d="M4.99988 0.999023L9.99988 5.99902L4.99988 10.999" stroke="#FFC500" stroke-width="2"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="solutions__col solutions__col-center">
-                            <div class="solutions__item">
-                                <p class="solutions__item-header">
-                                    Community Gathering
-                                </p>
-                                <p class="solutions__item-subheader">
-                                    Eager to conquer the countries with the biggest crypto potential? Start with Ukraine, 3rd country worldwide by crypto adoption.
-                                </p>
-                                <a class="solutions__item-link" href="" target="_blank">
-                                    Read More
-                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.99988 5.99902L-0.00012207 5.99902" stroke="#FFC500" stroke-width="2" stroke-linejoin="round"/>
-                                        <path d="M4.99988 0.999023L9.99988 5.99902L4.99988 10.999" stroke="#FFC500" stroke-width="2"/>
-                                    </svg>
-                                </a>
-                            </div>
-                            <div class="solutions__item">
-                                <p class="solutions__item-header">
-                                    Ukrainian Market Penetration
-                                </p>
-                                <p class="solutions__item-subheader">
-                                    Eager to conquer the countries with the biggest crypto potential? Start with Ukraine, 3rd country worldwide by crypto adoption.
-                                </p>
-                                <a class="solutions__item-link" href="" target="_blank">
-                                    Read More
+                                <a class="solutions__item-link" href="https://b.solus.agency/community-gathering/" target="_blank">
+                                    Boost Now
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M9.99988 5.99902L-0.00012207 5.99902" stroke="#FFC500" stroke-width="2" stroke-linejoin="round"/>
                                         <path d="M4.99988 0.999023L9.99988 5.99902L4.99988 10.999" stroke="#FFC500" stroke-width="2"/>
@@ -542,13 +636,13 @@
                         <div class="solutions__col solutions__col-right">
                             <div class="solutions__item">
                                 <p class="solutions__item-header">
-                                    CEXes & DEXes
+                                    CRYPTO EVENTS
                                 </p>
                                 <p class="solutions__item-subheader">
-                                    Eager to conquer the countries with the biggest crypto potential? Start with Ukraine, 3rd country worldwide by crypto adoption.
+                                    With a well-thought-out system and high customization opportunities of social 3 tools, we can structure both the event itself and the marketing campaign around it.
                                 </p>
-                                <a class="solutions__item-link" href="" target="_blank">
-                                    Read More
+                                <a class="solutions__item-link" href="https://b.solus.agency/crypto-event/" target="_blank">
+                                    Join the Show
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M9.99988 5.99902L-0.00012207 5.99902" stroke="#FFC500" stroke-width="2" stroke-linejoin="round"/>
                                         <path d="M4.99988 0.999023L9.99988 5.99902L4.99988 10.999" stroke="#FFC500" stroke-width="2"/>
@@ -557,28 +651,24 @@
                             </div>
                             <div class="solutions__item">
                                 <p class="solutions__item-header">
-                                    KOLs Creation
+                                    TRADERS ATTRACTION
                                 </p>
                                 <p class="solutions__item-subheader">
-                                    Eager to conquer the countries with the biggest crypto potential? Start with Ukraine, 3rd country worldwide by crypto adoption.
+                                    “Traders slipping through? Let's make your platform the crypto magnet they can't resist!”
                                 </p>
-                                <a class="solutions__item-link" href="" target="_blank">
-                                    Read More
-                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.99988 5.99902L-0.00012207 5.99902" stroke="#FFC500" stroke-width="2" stroke-linejoin="round"/>
-                                        <path d="M4.99988 0.999023L9.99988 5.99902L4.99988 10.999" stroke="#FFC500" stroke-width="2"/>
-                                    </svg>
+                                <a class="solutions__item-link" target="_blank">
+                                    Caming soon...
                                 </a>
                             </div>
                             <div class="solutions__item">
                                 <p class="solutions__item-header">
-                                    Crypto Events
+                                    KOLs ACCELERATOR
                                 </p>
                                 <p class="solutions__item-subheader">
-                                    Eager to conquer the countries with the biggest crypto potential? Start with Ukraine, 3rd country worldwide by crypto adoption.
+                                    Partner with us and elevate your status among the Web3 industry's top KOLs.
                                 </p>
-                                <a class="solutions__item-link" href="" target="_blank">
-                                    Read More
+                                <a class="solutions__item-link" href="https://b.solus.agency/kol-creating/" target="_blank">
+                                    Connect Now
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M9.99988 5.99902L-0.00012207 5.99902" stroke="#FFC500" stroke-width="2" stroke-linejoin="round"/>
                                         <path d="M4.99988 0.999023L9.99988 5.99902L4.99988 10.999" stroke="#FFC500" stroke-width="2"/>
@@ -597,44 +687,12 @@
                         want to see us in action?
                     </h2>
                     <p class="cta__subheader">
-                        Lorem ipsum dolor sit amet consectetur. Nam id elit tellus et eros urna placerat massa at.
+                        Get all your burning questions answered by our blockchain marketing specialists. Share your goals, and see how we transform them into reality.
+
                     </p>
-                    <a class="cta__link" href="" target="_blank">
-                        Contact us
+                    <a class="cta__link" href="#book" target="_blank">
+                        Book a Call
                     </a>
-                </div>
-            </div>
-        </section>
-        <section class="education">
-            <div class="education__container-l">
-                <div class="education__wrap">
-                    <div class="education__head">
-                        <h2 class="education__header">
-                            Educate with Solus
-                        </h2>
-                    </div>
-                    <div class="education__wrapper">
-                        <div class="education__books">
-                            <img src="assets/images/bn-d-education-books.webp" alt="book">
-                        </div>
-                        <div class="education__body">
-                            <p class="education__body-header">
-                                Download KOLs list that will make your brand as famous as they are!
-                            </p>
-                            <p class="education__body-subheader">
-                                A list of Top influencers in Twitter, TikTok, Telegram, and YouTube for Web3
-                            </p>
-                            <a class="education__body-link" href="" target="_blank">
-                                Get it now
-                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10 6L0 6" stroke="#FFC500" stroke-width="2" stroke-linejoin="round"/>
-                                    <path d="M5 1L10 6L5 11" stroke="#FFC500" stroke-width="2"/>
-                                </svg>
-                            </a>
-                        </div>
-                        
-                    </div>
-                    
                 </div>
             </div>
         </section>
@@ -659,7 +717,7 @@
                                     <p class="mySwiper__slide-subheader">
                                         CMO, XDAO
                                     </p>
-                                    <a class="mySwiper__slide-link" href="" target="_blank">
+                                    <a class="mySwiper__slide-link" href="https://clutch.co/profile/solus-agency#reviews" target="_blank">
                                         Read on Clutch
                                     </a>
                                 </div>
@@ -670,7 +728,7 @@
                                     <p class="mySwiper__slide-subheader">
                                         Project Manager, NFT Marketplace Company
                                     </p>
-                                    <a class="mySwiper__slide-link" href="" target="_blank">
+                                    <a class="mySwiper__slide-link" href="https://clutch.co/profile/solus-agency#reviews" target="_blank">
                                         Read on Clutch
                                     </a>
                                 </div>
@@ -681,7 +739,7 @@
                                     <p class="mySwiper__slide-subheader">
                                         CEO, Liberty Gaming
                                     </p>
-                                    <a class="mySwiper__slide-link" href="" target="_blank">
+                                    <a class="mySwiper__slide-link" href="https://clutch.co/profile/solus-agency#reviews" target="_blank">
                                         Read on Clutch
                                     </a>
                                 </div>
@@ -692,7 +750,7 @@
                                     <p class="mySwiper__slide-subheader">
                                         Head of Digital, Waves
                                     </p>
-                                    <a class="mySwiper__slide-link" href="" target="_blank">
+                                    <a class="mySwiper__slide-link" href="https://clutch.co/profile/solus-agency#reviews" target="_blank">
                                         Read on Clutch
                                     </a>
                                 </div>
@@ -703,7 +761,7 @@
                                     <p class="mySwiper__slide-subheader">
                                         Head of Product, LaborX
                                     </p>
-                                    <a class="mySwiper__slide-link" href="" target="_blank">
+                                    <a class="mySwiper__slide-link" href="https://clutch.co/profile/solus-agency#reviews" target="_blank">
                                         Read on Clutch
                                     </a>
                                 </div>
@@ -719,7 +777,7 @@
                 <div class="numbers__wrap">
                     <div class="numbers__head">
                         <p class="numbers__upheader">Numbers</p>
-                        <h2 class="numbers__header">Numbers never lie</h2>
+                        <h2 class="numbers__header">Straight Stats, No Spin</h2>
                     </div>
                     <div class="numbers__body">
                         <div class="numbers__item">
@@ -763,7 +821,56 @@
                 </div>
             </div>
         </section>
-        <section class="team">
+        <section class="education">
+            <div class="education__container-l">
+                <div class="education__wrap">
+                    <div class="education__head">
+                        <h2 class="education__header">
+                            Grow with Solus
+                        </h2>
+                    </div>
+                    <div class="education__wrapper">
+                        <div class="education__books">
+                            <img src="assets/images/bn-d-education-book-crypto-infl.webp" class="education__book-one education__book education__book-active" alt="book">
+                            <img src="assets/images/bn-d-education-book-media-kit.webp" class="education__book-two education__book" alt="">
+                        </div>
+                        <div class="education__body">
+                            <div class="education__block education__block-active">
+                                <p class="education__body-header">
+                                    Download KOLs list that will make your brand as famous as they are!
+                                </p>
+                                <p class="education__body-subheader">
+                                    A list of Top influencers in Twitter, TikTok, Telegram, and YouTube for Web3
+                                </p>
+                                <a class="education__body-link" href="https://b.solus.agency/make-your-brand-a-treat-for-the-eye-trough-web-3-0-kol-marketing/" target="_blank">
+                                    Get it now
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 6L0 6" stroke="#FFC500" stroke-width="2" stroke-linejoin="round"/>
+                                        <path d="M5 1L10 6L5 11" stroke="#FFC500" stroke-width="2"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="education__block">
+                                <p class="education__body-header">
+                                    Make Your Brand A Treat For The Eye Trough Web 3.0 KOL Marketing
+                                </p>
+                                <p class="education__body-subheader">
+                                    Influencers are at the top of advertising brands. Use it! Get the list of KOLs to empower your brand in a long run.
+                                </p>
+                                <a class="education__body-link" href="https://b.solus.agency/skyrocket-your-project-out-of-crypto-winter/" target="_blank">
+                                    Get it now
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 6L0 6" stroke="#FFC500" stroke-width="2" stroke-linejoin="round"/>
+                                        <path d="M5 1L10 6L5 11" stroke="#FFC500" stroke-width="2"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <section class="team">
             <div class="team__container">
                 <div class="team__wrap">
                     <div class="team__head">
@@ -1146,44 +1253,192 @@
                     </div>
                 </div>
             </div>
+        </section> -->
+        <section class="blog" id="blog">
+            <div class="blog__container-l">
+                <div class="blog__wrap">
+                    <div class="blog__head">
+                        <h2 class="blog__header">
+                            Blog
+                        </h2>
+                        <a href="https://b.solus.agency/blog/" target="_blank" class="blog__link"> 
+                            Read All
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 6L0 6" stroke="#FFC500" stroke-width="2" stroke-linejoin="round"/>
+                                <path d="M5 1L10 6L5 11" stroke="#FFC500" stroke-width="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="blog__body">
+                        <a href="https://b.solus.agency/direct-advertising-or-native-approach/" target="_blank">
+                            <div class="blog__item">
+                                <img src="assets/images/bn-d-blog-preview-1.webp" alt="preview-blog">
+                                <p class="blog__item-name">
+                                    Direct Advertising or Native Approach
+                                </p>
+                                <div class="blog__item-bottom">
+                                    <div class="blog__item-bottom-left">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.4 2.19995H1.6C1.26863 2.19995 1 2.46858 1 2.79995V12.4C1 12.7313 1.26863 13 1.6 13H12.4C12.7314 13 13 12.7313 13 12.4V2.79995C13 2.46858 12.7314 2.19995 12.4 2.19995Z" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1 5.80005H13" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1 9.3999H13" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M4.89999 1V3.4" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M9.10001 1V3.4" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M4.89999 5.80005V13" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M9.10001 5.80005V13" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13 3.69995V11.5" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1 3.69995V11.5" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M4 13H10" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <p>
+                                            16 June 2023
+                                        </p>
+                                    </div>
+                                    <div class="blog__item-bottom-right">
+                                        <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 13C8.76142 13 11 10.7167 11 7.90005C11 5.0834 8.76142 2.80005 6 2.80005C3.23858 2.80005 1 5.0834 1 7.90005C1 10.7167 3.23858 13 6 13Z" stroke="#43536D" stroke-linejoin="round"/>
+                                            <path d="M4.23535 0.999756H7.76476" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M6.00024 5.49976V7.89976" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8.35318 7.89966H6.00024" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M6.00024 0.999756V2.19976" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <p>
+                                            5 Mins Read
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://b.solus.agency/a-bear-market-is-here-to-kill-all-the-nft-projects-but/" target="_blank">
+                            <div class="blog__item">
+                                <img src="assets/images/bn-d-blog-preview-2.webp" alt="preview-blog">
+                                <p class="blog__item-name">
+                                    A bear market is here to kill all the NFT projects, but…
+                                </p>
+                                <div class="blog__item-bottom">
+                                    <div class="blog__item-bottom-left">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.4 2.19995H1.6C1.26863 2.19995 1 2.46858 1 2.79995V12.4C1 12.7313 1.26863 13 1.6 13H12.4C12.7314 13 13 12.7313 13 12.4V2.79995C13 2.46858 12.7314 2.19995 12.4 2.19995Z" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1 5.80005H13" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1 9.3999H13" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M4.89999 1V3.4" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M9.10001 1V3.4" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M4.89999 5.80005V13" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M9.10001 5.80005V13" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13 3.69995V11.5" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1 3.69995V11.5" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M4 13H10" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <p>
+                                            16 June 2023
+                                        </p>
+                                    </div>
+                                    <div class="blog__item-bottom-right">
+                                        <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 13C8.76142 13 11 10.7167 11 7.90005C11 5.0834 8.76142 2.80005 6 2.80005C3.23858 2.80005 1 5.0834 1 7.90005C1 10.7167 3.23858 13 6 13Z" stroke="#43536D" stroke-linejoin="round"/>
+                                            <path d="M4.23535 0.999756H7.76476" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M6.00024 5.49976V7.89976" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8.35318 7.89966H6.00024" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M6.00024 0.999756V2.19976" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <p>
+                                            5 Mins Read
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://b.solus.agency/a-guide-to-survive-and-prosper-in-a-bear-market/" target="_blank">
+                            <div class="blog__item">
+                                <img src="assets/images/bn-d-blog-preview-3.webp" alt="preview-blog">
+                                <p class="blog__item-name">
+                                    A Guide to Survive and Prosper in a Bear Market
+                                </p>
+                                <div class="blog__item-bottom">
+                                    <div class="blog__item-bottom-left">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.4 2.19995H1.6C1.26863 2.19995 1 2.46858 1 2.79995V12.4C1 12.7313 1.26863 13 1.6 13H12.4C12.7314 13 13 12.7313 13 12.4V2.79995C13 2.46858 12.7314 2.19995 12.4 2.19995Z" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1 5.80005H13" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1 9.3999H13" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M4.89999 1V3.4" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M9.10001 1V3.4" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M4.89999 5.80005V13" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M9.10001 5.80005V13" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13 3.69995V11.5" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1 3.69995V11.5" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M4 13H10" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <p>
+                                            16 June 2023
+                                        </p>
+                                    </div>
+                                    <div class="blog__item-bottom-right">
+                                        <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 13C8.76142 13 11 10.7167 11 7.90005C11 5.0834 8.76142 2.80005 6 2.80005C3.23858 2.80005 1 5.0834 1 7.90005C1 10.7167 3.23858 13 6 13Z" stroke="#43536D" stroke-linejoin="round"/>
+                                            <path d="M4.23535 0.999756H7.76476" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M6.00024 5.49976V7.89976" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8.35318 7.89966H6.00024" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M6.00024 0.999756V2.19976" stroke="#43536D" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <p>
+                                            5 Mins Read
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="book">
+        <section class="book" id="book">
             <div class="book__container-m">
                 <div class="book__wrap">
-                    <div class="book__left">
-                        <div class="book__head">
-                            <h2 class="book__header">
-                                Book intro call
-                            </h2>
-                            <p class="book__subheader">
-                                What do you get on this free meeting?
-                            </p>
+                    <div class="book__top">
+                        <p class="book__top-upheader">
+                            WHAT'S IN STORE FOR YOU?
+                        </p>
+                        <p class="book__top-header">
+                            SCHEDULE YOUR INTRODUCTORY CALL NOW!
+                        </p>
+                    </div>
+                    <div class="book__middle">
+                        <div class="book__left">
+                            <div class="book__head">
+                                <h2 class="book__header">
+                                    Book intro call
+                                </h2>
+                                <p class="book__subheader">
+                                    What do you get on this free meeting?
+                                </p>
+                            </div>
+                            <div class="book__explain">
+                                <div class="book__item">
+                                    <p>01</p>
+                                    <p>Q&A</p>
+                                </div>
+                                <div class="book__item">
+                                    <p>02</p>
+                                    <p>Customized marketing suggestions</p>
+                                </div>
+                                <div class="book__item">
+                                    <p>03</p>
+                                    <p>A free book about crypto marketing</p>
+                                </div>
+                                <div class="book__item">
+                                    <p>04</p>
+                                    <p>Essential guidance on the way to reach</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="book__explain">
-                            <div class="book__item">
-                                <p>01</p>
-                                <p>Q&A</p>
-                            </div>
-                            <div class="book__item">
-                                <p>02</p>
-                                <p>Customized marketing suggestions</p>
-                            </div>
-                            <div class="book__item">
-                                <p>03</p>
-                                <p>A free book about crypto marketing</p>
-                            </div>
-                            <div class="book__item">
-                                <p>04</p>
-                                <p>Essential guidance on the way to reach</p>
-                            </div>
+                        <div class="book__right">
+                            <!-- Calendly inline widget begin -->
+                            <div class="calendly-inline-widget" data-url="https://calendly.com/d/dt4-mbd-t79/solus-agency-free-marketing-consultation?hide_event_type_details=1&hide_gdpr_banner=1&background_color=161718&text_color=f4f4f4&primary_color=ffc500" style="min-width:320px;height:700px;"></div>
+                            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                            <!-- Calendly inline widget end -->
                         </div>
                     </div>
-                    <div class="book__right">
-                        <!-- Calendly inline widget begin -->
-                        <div class="calendly-inline-widget" data-url="https://calendly.com/d/dt4-mbd-t79/solus-agency-free-marketing-consultation?hide_event_type_details=1&hide_gdpr_banner=1&background_color=161718&text_color=f4f4f4&primary_color=ffc500" style="min-width:320px;height:700px;"></div>
-                        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                        <!-- Calendly inline widget end -->
-                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -1199,24 +1454,32 @@
                             </p>
                             <div class="footer__contacts-wrapper">
                                 <div class="footer__contacts-item">
-                                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7.45684 7.8745L7.87789 5.342H5.28421V3.69587C5.28421 3.00339 5.64632 2.32674 6.80421 2.32674H8V0.170153C7.30363 0.0650305 6.59998 0.00815972 5.89474 0C3.76 0 2.36632 1.21481 2.36632 3.41097V5.342H0V7.8745H2.36632V14H5.28421V7.8745H7.45684Z" fill="white"/>
-                                    </svg>
+                                    <a href="https://www.facebook.com/profile.php?id=100089715350782" target="_blank">
+                                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.45684 7.8745L7.87789 5.342H5.28421V3.69587C5.28421 3.00339 5.64632 2.32674 6.80421 2.32674H8V0.170153C7.30363 0.0650305 6.59998 0.00815972 5.89474 0C3.76 0 2.36632 1.21481 2.36632 3.41097V5.342H0V7.8745H2.36632V14H5.28421V7.8745H7.45684Z" fill="white"/>
+                                        </svg>
+                                    </a>
                                 </div>
                                 <div class="footer__contacts-item">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3.17805 13.4997V4.72831H0.176898V13.4997H3.17836H3.17805ZM1.6781 3.53093C2.72445 3.53093 3.37587 2.85739 3.37587 2.01565C3.35628 1.15474 2.72445 0.5 1.698 0.5C0.670849 0.5 0 1.15474 0 2.01558C0 2.85731 0.651184 3.53085 1.65844 3.53085H1.67787L1.6781 3.53093ZM4.83923 13.4997H7.84015V8.60188C7.84015 8.34008 7.85973 8.07759 7.93902 7.89059C8.15587 7.3666 8.64966 6.82419 9.47892 6.82419C10.5646 6.82419 10.9992 7.62848 10.9992 8.80775V13.4997H14V8.47045C14 5.77637 12.5196 4.52267 10.5452 4.52267C8.92637 4.52267 8.21541 5.40162 7.8204 6.00027H7.84038V4.72861H4.83939C4.87856 5.55147 4.83915 13.5 4.83915 13.5L4.83923 13.4997Z" fill="white"/>
-                                    </svg>
+                                    <a href="https://www.linkedin.com/company/solus-agency/" target="_blank">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.17805 13.4997V4.72831H0.176898V13.4997H3.17836H3.17805ZM1.6781 3.53093C2.72445 3.53093 3.37587 2.85739 3.37587 2.01565C3.35628 1.15474 2.72445 0.5 1.698 0.5C0.670849 0.5 0 1.15474 0 2.01558C0 2.85731 0.651184 3.53085 1.65844 3.53085H1.67787L1.6781 3.53093ZM4.83923 13.4997H7.84015V8.60188C7.84015 8.34008 7.85973 8.07759 7.93902 7.89059C8.15587 7.3666 8.64966 6.82419 9.47892 6.82419C10.5646 6.82419 10.9992 7.62848 10.9992 8.80775V13.4997H14V8.47045C14 5.77637 12.5196 4.52267 10.5452 4.52267C8.92637 4.52267 8.21541 5.40162 7.8204 6.00027H7.84038V4.72861H4.83939C4.87856 5.55147 4.83915 13.5 4.83915 13.5L4.83923 13.4997Z" fill="white"/>
+                                        </svg>
+                                    </a>
                                 </div>
                                 <div class="footer__contacts-item">
-                                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14 1.42054C13.4849 1.66148 12.9313 1.82432 12.3503 1.89756C12.9434 1.52262 13.3988 0.928931 13.6132 0.221552C13.0583 0.568679 12.4436 0.820801 11.7893 0.956692C11.2653 0.367921 10.5189 0 9.69277 0C8.10647 0 6.82041 1.35637 6.82041 3.02935C6.82041 3.26679 6.84586 3.49801 6.89482 3.71972C4.50766 3.59339 2.39125 2.38733 0.974608 0.554528C0.727371 1.00195 0.585727 1.52235 0.585727 2.07752C0.585727 3.12852 1.09285 4.05578 1.86354 4.59902C1.39268 4.5833 0.949823 4.44703 0.56253 4.22013C0.562325 4.23277 0.562325 4.24546 0.562325 4.25821C0.562325 5.726 1.5524 6.95043 2.86637 7.22869C2.62533 7.29793 2.37159 7.33493 2.1096 7.33493C1.92453 7.33493 1.74458 7.31597 1.56925 7.28059C1.93472 8.48417 2.99546 9.36001 4.25234 9.38448C3.26933 10.197 2.03084 10.6813 0.685175 10.6813C0.453352 10.6813 0.224705 10.667 0 10.639C1.27111 11.4985 2.7809 12 4.40294 12C9.68606 12 12.5751 7.38386 12.5751 3.38064C12.5751 3.24929 12.5723 3.11863 12.5668 2.98874C13.1279 2.56162 13.6149 2.02805 14 1.42054Z" fill="white"/>
-                                    </svg>
+                                    <a href="https://twitter.com/solus_agency?s=20" target="_blank">
+                                        <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14 1.42054C13.4849 1.66148 12.9313 1.82432 12.3503 1.89756C12.9434 1.52262 13.3988 0.928931 13.6132 0.221552C13.0583 0.568679 12.4436 0.820801 11.7893 0.956692C11.2653 0.367921 10.5189 0 9.69277 0C8.10647 0 6.82041 1.35637 6.82041 3.02935C6.82041 3.26679 6.84586 3.49801 6.89482 3.71972C4.50766 3.59339 2.39125 2.38733 0.974608 0.554528C0.727371 1.00195 0.585727 1.52235 0.585727 2.07752C0.585727 3.12852 1.09285 4.05578 1.86354 4.59902C1.39268 4.5833 0.949823 4.44703 0.56253 4.22013C0.562325 4.23277 0.562325 4.24546 0.562325 4.25821C0.562325 5.726 1.5524 6.95043 2.86637 7.22869C2.62533 7.29793 2.37159 7.33493 2.1096 7.33493C1.92453 7.33493 1.74458 7.31597 1.56925 7.28059C1.93472 8.48417 2.99546 9.36001 4.25234 9.38448C3.26933 10.197 2.03084 10.6813 0.685175 10.6813C0.453352 10.6813 0.224705 10.667 0 10.639C1.27111 11.4985 2.7809 12 4.40294 12C9.68606 12 12.5751 7.38386 12.5751 3.38064C12.5751 3.24929 12.5723 3.11863 12.5668 2.98874C13.1279 2.56162 13.6149 2.02805 14 1.42054Z" fill="white"/>
+                                        </svg>
+                                    </a>
                                 </div>
                                 <div class="footer__contacts-item">
-                                    <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4.18794 6.99463L0.800354 5.92419C0.800354 5.92419 0.395501 5.7649 0.525863 5.40367C0.552699 5.32918 0.606834 5.2658 0.768775 5.15687C1.51937 4.64947 14.6617 0.0682926 14.6617 0.0682926C14.6617 0.0682926 15.0328 -0.0529761 15.2517 0.0276827C15.3058 0.0439364 15.3545 0.0738463 15.3928 0.114352C15.4311 0.154857 15.4577 0.204505 15.4697 0.258217C15.4933 0.353086 15.5032 0.450689 15.4991 0.548207C15.498 0.632568 15.4875 0.710759 15.4795 0.833374C15.3995 2.08589 13.0041 11.4338 13.0041 11.4338C13.0041 11.4338 12.8608 11.9808 12.3474 11.9995C12.2212 12.0035 12.0955 11.9827 11.9777 11.9386C11.86 11.8944 11.7526 11.8277 11.662 11.7424C10.6544 10.9018 7.1717 8.63193 6.40214 8.13272C6.38478 8.12125 6.37016 8.1063 6.35926 8.08888C6.34837 8.07147 6.34145 8.05199 6.33898 8.03176C6.32822 7.97914 6.38722 7.91397 6.38722 7.91397C6.38722 7.91397 12.4515 2.68628 12.6128 2.13749C12.6253 2.09497 12.5781 2.074 12.5147 2.09262C12.112 2.23632 5.12974 6.51259 4.35913 6.98454C4.30366 7.00081 4.24503 7.00427 4.18794 6.99463Z" fill="white"/>
-                                    </svg>
+                                    <a href="https://t.me/solustribe" target="_blank">
+                                        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.18794 6.99463L0.800354 5.92419C0.800354 5.92419 0.395501 5.7649 0.525863 5.40367C0.552699 5.32918 0.606834 5.2658 0.768775 5.15687C1.51937 4.64947 14.6617 0.0682926 14.6617 0.0682926C14.6617 0.0682926 15.0328 -0.0529761 15.2517 0.0276827C15.3058 0.0439364 15.3545 0.0738463 15.3928 0.114352C15.4311 0.154857 15.4577 0.204505 15.4697 0.258217C15.4933 0.353086 15.5032 0.450689 15.4991 0.548207C15.498 0.632568 15.4875 0.710759 15.4795 0.833374C15.3995 2.08589 13.0041 11.4338 13.0041 11.4338C13.0041 11.4338 12.8608 11.9808 12.3474 11.9995C12.2212 12.0035 12.0955 11.9827 11.9777 11.9386C11.86 11.8944 11.7526 11.8277 11.662 11.7424C10.6544 10.9018 7.1717 8.63193 6.40214 8.13272C6.38478 8.12125 6.37016 8.1063 6.35926 8.08888C6.34837 8.07147 6.34145 8.05199 6.33898 8.03176C6.32822 7.97914 6.38722 7.91397 6.38722 7.91397C6.38722 7.91397 12.4515 2.68628 12.6128 2.13749C12.6253 2.09497 12.5781 2.074 12.5147 2.09262C12.112 2.23632 5.12974 6.51259 4.35913 6.98454C4.30366 7.00081 4.24503 7.00427 4.18794 6.99463Z" fill="white"/>
+                                        </svg>
+                                    </a>
                                 </div>
                                 <div class="footer__contacts-item">
                                     <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1231,32 +1494,42 @@
                         </div>
                         <div class="footer__projects">
                             <div class="footer__projects-single">
-                                <img src="assets/images/bn-d-footer-logo-group.svg" alt="Solus Group">
+                                <a href="https://www.solus.agency/" target="_blank">
+                                    <img src="assets/images/bn-d-footer-logo-group.svg" alt="Solus Group">
+                                </a>
                             </div>
                             <div class="footer__projects-plural">
                                 <div class="footer__projects-col">
-                                    <img src="assets/images/bn-d-footer-logo-solusb.svg" alt="solusb">
-                                    <img src="assets/images/bn-d-footer-logo-merge.svg" alt="merge">
+                                    <a href="https://b.solus.agency/" target="_blank">
+                                        <img src="assets/images/bn-d-footer-logo-solusb.svg" alt="solusb">
+                                    </a>
+                                    <a href="https://www.mergewave.capital/" target="_blank">
+                                        <img src="assets/images/bn-d-footer-logo-merge.svg" alt="merge">
+                                    </a>
                                 </div>
                                 <div class="footer__projects-col">
-                                    <img src="assets/images/bn-d-footer-logo-solust.svg" alt="solust">
-                                    <img class="footer__venq" src="assets/images/bn-d-footer-logo-venq.png" alt="venq">
+                                    <a href="https://t.solus.agency/" target="_blank">
+                                        <img src="assets/images/bn-d-footer-logo-solust.svg" alt="solust">
+                                    </a>
+                                    <a href="https://www.venq.ai/" target="_blank">
+                                        <img class="footer__venq" src="assets/images/bn-d-footer-logo-venq.png" alt="venq">
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="footer__navi">
                         <div class="footer__navi-col">
-                            <a class="footer__link" href="" target="_blank">Services</a>
+                            <a class="footer__link" href="#services" target="_blank">Services</a>
                         </div>
                         <div class="footer__navi-col">
-                            <a class="footer__link footer__link-yellow" href="" target="_blank">Solutions</a>
+                            <a class="footer__link footer__link-yellow" href="#solutions" target="_blank">Solutions</a>
                         </div>
                         <div class="footer__navi-col">
-                            <a class="footer__link" href="" target="_blank">Cases</a>
+                            <a class="footer__link" href="#cases" target="_blank">Cases</a>
                         </div>
                         <div class="footer__navi-col">
-                            <a class="footer__link" href="" target="_blank">Blog</a>
+                            <a class="footer__link" href="#blog" target="_blank">Blog</a>
                         </div>
                         <div class="footer__navi-wrapper">
                             <div class="footer__locations">

@@ -1,5 +1,20 @@
 
 .numbers{
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 55rem;
+        top: 10rem;
+        height: 66rem;
+        right: 50%;
+        transform: translateX(50%);
+        background: url('../assets/images/bn-d-numbers-vector.webp') no-repeat;
+        background-size: contain;
+        filter: blur(200px);
+        -webkit-filter: blur(200px);
+        z-index: -1;
+    }
     &__wrap{
         flex-direction: column;
         padding: 12rem 0;
