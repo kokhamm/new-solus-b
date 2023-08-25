@@ -100,6 +100,21 @@ var swiper2 = new Swiper(".mySwiperTwo", {
   slideToClickedSlide: true,
   loop: true,
 })
+var swiper3 = new Swiper(".mySwiperThree", {
+    effect: "cards",
+    // slideToClickedSlide: true,
+    initialSlide: 5,
+    cardsEffect:{
+        perSlideOffset: 14,
+        perSlideRotate: 4,
+        rotate: true,
+        slideShadows: true,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+})
 
 var delay = 300; // 0.5 seconds
 var timer;

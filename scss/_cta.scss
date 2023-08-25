@@ -34,3 +34,16 @@
         line-height: 130%;
     }
 }
+@media (max-width:1100px) {
+    .cta{
+        background: url('../assets/images/bn-m-cta-bg.webp') center no-repeat;
+        background-size: cover;
+        &__header{
+            font-size: 4rem;
+        }
+        &__subheader{
+            font-size: 1.6rem;
+            max-width: 31rem;
+        }
+    }
+}
