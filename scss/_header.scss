@@ -177,6 +177,26 @@
         &__link{
             font-size: 2rem;
         }
-        
+        &__wrap{
+            padding: 3rem 2rem;
+        }
+        &__li a{
+            font-size: 3rem;
+        }
+        &__li{
+            margin-bottom: 1.5rem;
+        }
+        &__button::before{
+            display: none;
+        }
+        &__button{
+            color: #ffc500;
+            padding: 0;
+            border-radius: 0;
+            border: none;
+            span{
+                font-size: 3rem;
+            }
+        }
     }
 }

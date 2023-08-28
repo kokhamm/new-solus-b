@@ -118,11 +118,61 @@
 }
 @media (max-width:1100px) {
     .services{
+        &__container-l{
+            padding: 0;
+        }
         &__header{
             font-size: 2.4rem;
+            padding: 0 2rem;
         }
         &__upheader{
             font-size: 1.8rem;
+        }
+        &__swiper-header{
+            color: #FFC500;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        &__swiper-subheader{
+            color: #FFF;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 130%;
+            margin-bottom: 4rem;
+        }
+        &__swiper-item{
+            padding: 1.2rem 2.4rem;
+            border-radius: 0.6rem;
+            background: #192332;
+            font-size: 1.3rem;
+            &:not(:last-child){
+                margin-bottom: 1rem;
+            }
+        }
+        .mySwiperFive{
+            width: 100%;
+            width: 100%;
+            padding-bottom: 4rem;
+            .swiper-slide{
+                width: 100vw;
+                padding: 0 2rem;
+                &:nth-child(1){
+                    background: url('../assets/images/bn-m-expertise-1.webp') no-repeat center right;
+                }
+                &:nth-child(2){
+                    background: url('../assets/images/bn-m-expertise-2.webp') no-repeat center right;
+                }
+                &:nth-child(3){
+                    background: url('../assets/images/bn-m-expertise-3.webp') no-repeat center right;
+                }
+                &:nth-child(4){
+                    background: url('../assets/images/bn-m-expertise-4.webp') no-repeat center right;
+                }
+                &:nth-child(5){
+                    background: url('../assets/images/bn-m-expertise-5.webp') no-repeat center right;
+                }
+            }
         }
     }
 }

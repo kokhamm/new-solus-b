@@ -15,6 +15,9 @@
         transform: translate3d(0, 0, 0);
         z-index: -1;
     }
+    &__item{
+        max-width: 44rem;
+    }
     &__top{
         display: flex;
         flex-direction: column;
@@ -43,13 +46,17 @@
     &__middle{
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 5rem;
         align-items: center;
     }
     &__left{
         display: flex;
         flex-direction: column;
         gap: 4rem;
+        height: 100%;
+        max-width: 44rem;
+        width: 100%;
     }
     &__head{
         display: flex;
@@ -67,18 +74,33 @@
     &__explain{
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 5rem;
     }
     &__item{
         padding: 2rem;
         display: flex;
-        align-items: center;
         gap: 2rem;
         border-radius: 0.6rem;
         background: linear-gradient(270deg, rgba(25, 35, 50, 0.00) 0%, #192332 100%);
-        p{
+        p:nth-child(1){
+            color: #FFC500;
             font-size: 2rem;
             font-weight: 500;
+        }
+    }
+    &__bloki{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        p:nth-child(1){
+            font-size: 2rem;
+            font-weight: 500;
+            color: #f4f4f4;
+        }
+        p:nth-child(2){
+            font-size: 1.2rem;
+            font-weight: 300;
+            max-width: 30rem;
         }
     }
     &__right{
@@ -89,4 +111,25 @@
 .calendly-inline-widget{
     min-width: 50rem !important;
     height: 50rem !important;
+}
+@media (max-width: 1100px) {
+    .book{
+        &__top-header{
+            font-size: 2.4rem;
+        }
+        &__top-upheader{
+            font-size: 1.8rem;
+        }
+        &__middle{
+            flex-direction: column;
+        }
+        &__explain{
+            gap: 2rem;
+        }
+    }
+    .calendly-inline-widget{
+        min-width: initial !important;
+        width: 90vw;
+        -webkit-overflow-scrolling: touch !important;
+    }
 }

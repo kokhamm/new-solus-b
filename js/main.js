@@ -79,6 +79,7 @@ var swiper = new Swiper(".mySwiper", {
       spaceBetween: 150,
       slidesPerView: "auto",
       slideToClickedSlide: true,
+      mousewheel: true,
       initialSlide: 1,
     //   loop: true,
       coverflowEffect: {
@@ -99,11 +100,11 @@ var swiper2 = new Swiper(".mySwiperTwo", {
   slidesPerView: 7,
   slideToClickedSlide: true,
   loop: true,
-})
+});
 var swiper3 = new Swiper(".mySwiperThree", {
     effect: "cards",
-    // slideToClickedSlide: true,
     initialSlide: 5,
+    mousewheel: true,
     cardsEffect:{
         perSlideOffset: 14,
         perSlideRotate: 4,
@@ -114,7 +115,31 @@ var swiper3 = new Swiper(".mySwiperThree", {
         el: ".swiper-pagination",
         clickable: true,
     },
-})
+});
+var swiper4 = new Swiper(".mySwiperFour", {
+    slidesPerView: 1,
+    centeredSlides: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
+var swiper5 = new Swiper(".mySwiperFive", {
+    slidesPerView: 1,
+    centeredSlides: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
+var swiper6 = new Swiper(".mySwiperSix", {
+    slidesPerView: 1,
+    centeredSlides: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
 
 var delay = 300; // 0.5 seconds
 var timer;
@@ -133,12 +158,12 @@ elements.forEach(function(elem) {
         clearTimeout(timer); // Clear any existing timer
 
         if (!elem.classList.contains('education__book-active')) {
-            bookOne.style.animation = 'book-left 0.6s ease-in-out forwards';
-            bookTwo.style.animation = 'book-right 0.6s ease-in-out forwards';
+            bookOne.style.animation = 'book-left 0.8s ease-in-out forwards';
+            bookTwo.style.animation = 'book-right 0.8s ease-in-out forwards';
 
             setTimeout(function() {
                 resetAnimations();
-            }, 600);
+            }, 800);
         }
 
         // Define the currently hovered element for reference in the timeout function

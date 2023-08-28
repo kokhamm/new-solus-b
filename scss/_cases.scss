@@ -50,9 +50,18 @@
     &__item{
         display: flex;
         flex-direction: column;
+        &:hover{
+            .cases__image-block{
+                transform: translateY(-2rem);
+            }
+            a{
+                transform: translateY(-1rem);
+            }
+        }
     }
     &__image-block{
         margin-bottom: 4rem;
+        transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
     &__logotype-block{
         margin-bottom: 2rem;
@@ -86,6 +95,55 @@
         &__items{
             flex-direction: column;
             align-items: center;
+        }
+    }
+    .mySwiperFour{
+        width: 100%;
+        height: 100%;
+        padding-bottom: 8rem;
+        padding-top: 3rem;
+        .swiper-slide{
+            width: 28rem;
+            height: 23rem;
+            position: relative;
+            &:nth-child(1){
+                background: url('../assets/images/bn-m-cases-1.webp') no-repeat center;
+                background-size: cover;
+            }
+            &:nth-child(2){
+                background: url('../assets/images/bn-m-cases-2.webp') no-repeat center;
+                background-size: cover;
+            }
+            &:nth-child(3){
+                background: url('../assets/images/bn-m-cases-3.webp') no-repeat center;
+                background-size: cover;
+            }
+            &:nth-child(4){
+                background: url('../assets/images/bn-m-cases-4.webp') no-repeat center;
+                background-size: cover;
+            }
+            &:nth-child(5){
+                background: url('../assets/images/bn-m-cases-5.webp') no-repeat center;
+                background-size: cover;
+            }
+            &:nth-child(6){
+                background: url('../assets/images/bn-m-cases-6.webp') no-repeat center;
+                background-size: cover;
+            }
+            .cases__swiper-link{
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                transform: translate(-50%, 50%);
+                padding: 0.9rem 2.4rem;
+                background: #FFC500;
+                border-radius: 0.6rem;
+                color: #080B11;
+                text-align: center;
+                font-size: 1.2rem;
+                font-weight: 700;
+                line-height: 140%;
+            }
         }
     }
 }
