@@ -71,6 +71,26 @@ document.addEventListener('DOMContentLoaded', function() {
             body.classList.add('stopper');
         }
     });
+    var anchorLinks = document.querySelectorAll('.anchor__link-mob');
+    anchorLinks.forEach(function(anchorLink) {
+        anchorLink.addEventListener('click', function() {
+            var headerMobile = document.querySelector('.header__mobile');
+            var body = document.querySelector('body');
+            var checkbox = document.querySelector('#checkbox');
+
+            if (headerMobile) {
+                headerMobile.classList.remove('on');
+            }
+
+            if (body) {
+                body.classList.remove('stopper');
+            }
+
+            if (checkbox) {
+                checkbox.checked = false;
+            }
+        });
+    });
 });
 var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
