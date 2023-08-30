@@ -7,6 +7,20 @@
         justify-content: center;
         gap: 2rem;
     }
+    &__preview img{
+        @keyframes pulse {
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(1.05);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+        animation: pulse 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    }
     &__header{
         font-family: 'Gilroy';
         font-size: 4rem;
@@ -53,6 +67,11 @@
         background: #FFC500;
         display: flex;
         width: max-content;
+        transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        transform-origin: left;
+        &:hover{
+            transform: scale(1.05);
+        }
     }
 }
 

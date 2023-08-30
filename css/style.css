@@ -389,7 +389,7 @@ table {
 }
 @font-face {
   font-family: "Gilroy";
-  src: url("../assets/fonts/Gilroy-Extrabold.eot"), url("../assets/fonts/Gilroy-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Gilroy-ExtraBold.woff2") format("woff2"), url("../assets/fonts/Gilroy-ExtraBold.woff") format("woff"), url("../assets/fonts/Gilroy-ExtraBold.ttf") format("truetype");
+  src: url("../assets/fonts/Gilroy-Extrabold.eot"), url("../assets/fonts/Gilroy-Extrabold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Gilroy-Extrabold.woff2") format("woff2"), url("../assets/fonts/Gilroy-Extrabold.woff") format("woff"), url("../assets/fonts/Gilroy-Extrabold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -733,7 +733,7 @@ a {
   max-width: 65rem;
   z-index: 30;
   transform: scale(0);
-  animation: core 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  animation: core 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s forwards;
 }
 .hero__core-particles {
   max-width: 65rem;
@@ -744,7 +744,7 @@ a {
 .hero__core-part {
   max-width: 65rem;
   transform: scale(0) rotate(45deg);
-  animation: parts 3s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  animation: parts 3s cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s forwards;
 }
 .hero__core:before {
   content: "";
@@ -752,7 +752,7 @@ a {
   height: 65rem;
   position: absolute;
   transform: scale(0);
-  animation: core 1.2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards, coreI 3s linear 1.6s infinite;
+  animation: core 1.2s cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s forwards, coreI 3s linear 1.6s infinite;
   border-radius: 65.4rem;
   opacity: 0.25;
   background: radial-gradient(50% 50% at 50% 50%, #FFC500 0%, rgba(255, 197, 0, 0) 100%);
@@ -760,17 +760,6 @@ a {
 @keyframes core {
   0% {
     transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes coreI {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.7);
   }
   100% {
     transform: scale(1);
@@ -787,9 +776,20 @@ a {
     transform: scale(1) rotate(-360deg);
   }
 }
+@keyframes centerI {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes parts {
   0% {
-    transform: scale(0.1) rotate(180deg);
+    transform: scale(0) rotate(180deg);
   }
   100% {
     transform: scale(1);
@@ -877,8 +877,14 @@ a {
 }
 
 @media (max-width: 1100px) {
+  .hero {
+    position: relative;
+  }
   .hero__core {
-    display: none;
+    position: absolute;
+    overflow: hidden;
+    right: 0rem;
+    width: 25rem;
   }
   .hero__header {
     font-size: 3.2rem;
@@ -891,6 +897,18 @@ a {
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
+  }
+  .hero__iframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero__wrapper {
+    z-index: 2;
+  }
+  #heroMedia {
+    max-width: 80% !important;
+    max-height: 25rem;
   }
 }
 .clients {
@@ -1032,8 +1050,8 @@ a {
 .cases__item:hover .cases__image-block {
   transform: translateY(-2rem);
 }
-.cases__item:hover a {
-  transform: translateY(-1rem);
+.cases__item:hover .cases__logotype-block img {
+  transform: translateY(-1rem) scale(1.1);
 }
 .cases__image-block {
   margin-bottom: 4rem;
@@ -1041,6 +1059,10 @@ a {
 }
 .cases__logotype-block {
   margin-bottom: 2rem;
+}
+.cases__logotype-block img {
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform-origin: left;
 }
 .cases__name {
   font-size: 1.6rem;
@@ -1130,6 +1152,20 @@ a {
   justify-content: center;
   gap: 2rem;
 }
+.tab-content__preview img {
+  animation: pulse 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .tab-content__header {
   font-family: "Gilroy";
   font-size: 4rem;
@@ -1178,6 +1214,11 @@ a {
   display: flex;
   width: -moz-max-content;
   width: max-content;
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform-origin: left;
+}
+.tab-content__link:hover {
+  transform: scale(1.05);
 }
 
 .tab-content.active {
@@ -2087,11 +2128,55 @@ a {
   z-index: -1;
   background: #080B11;
 }
+.footer__projects-single a {
+  position: relative;
+  display: flex;
+}
+.footer__projects-single a img {
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.footer__projects-single a img:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+}
+.footer__projects-single a img:nth-child(1):hover {
+  opacity: 0;
+}
+.footer__projects-single a img:nth-child(1):hover + img:nth-child(2) {
+  opacity: 1;
+  transform: scale(1.03);
+}
 .footer__projects-col {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
+}
+.footer__projects-col a {
+  position: relative;
+  display: flex;
+}
+.footer__projects-col a img {
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.footer__projects-col a img:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+}
+.footer__projects-col a img:nth-child(1):hover {
+  opacity: 0;
+}
+.footer__projects-col a img:nth-child(1):hover + img:nth-child(2) {
+  opacity: 1;
+  transform: scale(1.03);
 }
 .footer__venq {
   max-width: 8.7rem;
@@ -2377,6 +2462,22 @@ a {
   font-weight: 700;
   line-height: 110%;
 }
+.kols__body {
+  position: relative;
+}
+.kols__tooltip {
+  opacity: 0;
+  position: absolute;
+  background-color: #333;
+  padding: 1rem;
+  width: 11.5rem;
+  border-radius: 3px;
+  font-size: 1.4rem;
+  transition: 0.3s;
+}
+.kols__tooltip.kols__tooltip-active {
+  opacity: 1;
+}
 
 .mySwiperThree {
   padding-top: 10rem;
@@ -2427,7 +2528,7 @@ a {
 .mySwiperThree .swiper-slide__naming {
   text-align: center;
   font-size: 2.2rem;
-  font-weight: 900;
+  font-weight: 800;
   padding: 0 2rem;
 }
 .mySwiperThree .swiper-slide__result, .mySwiperThree .swiper-slide__heading {
@@ -2457,7 +2558,7 @@ a {
 }
 .mySwiperThree .swiper-slide__result p, .mySwiperThree .swiper-slide__result span {
   color: #FFC500;
-  font-weight: 900;
+  font-weight: 800;
 }
 .mySwiperThree .swiper-slide__button {
   border-radius: 1.5rem;

@@ -39,6 +39,22 @@
         font-weight: 700;
         line-height: 110%;
     }
+    &__body{
+        position: relative;
+    }
+    &__tooltip {
+        opacity: 0;
+        position: absolute;
+        background-color: #333;
+        padding: 1rem;
+        width: 11.5rem;
+        border-radius: 3px;
+        font-size: 1.4rem;
+        transition: 0.3s;
+    }
+    &__tooltip.kols__tooltip-active{
+        opacity: 1;
+    }
 }
 .mySwiperThree{
     padding-top: 10rem;
@@ -89,7 +105,7 @@
         &__naming{
             text-align: center;
             font-size: 2.2rem;
-            font-weight: 900;
+            font-weight: 800;
             padding: 0 2rem;
         }
         &__result,
@@ -119,7 +135,7 @@
             }
             p,span{
                 color: #FFC500;
-                font-weight: 900;
+                font-weight: 800;
             }
         }
         &__button{

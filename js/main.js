@@ -6,25 +6,21 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function(e) {
             const targetTab = e.target.getAttribute('data-tab');
 
-            // Remove active class from all buttons and contents
             tabButtons.forEach(btn => btn.classList.remove('active'));
             tabContents.forEach(content => {
                 content.classList.remove('active');
-                // Fade out animation
                 content.animate([
                     { opacity: 1 },
                     { opacity: 0 }
                 ], {
-                    duration: 300, // Duration in milliseconds
-                    fill: 'forwards' // Ensures the animation effect remains after completion
+                    duration: 300,
+                    fill: 'forwards'
                 });
             });
 
-            // Add active class to clicked button and corresponding content
             e.target.classList.add('active');
             const activeContent = document.getElementById(targetTab);
             activeContent.classList.add('active');
-            // Fade in animation
             activeContent.animate([
                 { opacity: 0 },
                 { opacity: 1 }
@@ -35,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     const heroCoreParts = document.querySelectorAll('.hero__core-part');
-    
+    const heroCenter = document.querySelector('.hero__core-center');
     heroCoreParts.forEach(part => {
         part.addEventListener('animationend', (e) => {
             if (e.animationName === 'parts') {
@@ -43,6 +39,48 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    heroCenter.addEventListener('animationend', (e) => {
+        if (e.animationName === 'core') {
+            console.log(1);
+            heroCenter.style.animation = 'centerI 60s linear infinite';
+        }
+    });
+    document.querySelector('.kols__body').addEventListener('mousemove', function(event) {
+        const tooltip = document.querySelector('.kols__tooltip');
+        const hoverBlock = document.querySelector('.kols__body');
+        const hoverBlockRect = hoverBlock.getBoundingClientRect();
+      
+        let x = event.clientX - hoverBlockRect.left;
+        let y = event.clientY - hoverBlockRect.top;
+      
+        // Adjust the tooltip position if it goes outside the hoverBlock
+        if (x + tooltip.offsetWidth > hoverBlock.offsetWidth) {
+          x = hoverBlock.offsetWidth - tooltip.offsetWidth;
+        }
+      
+        if (y + tooltip.offsetHeight > hoverBlock.offsetHeight) {
+          y = hoverBlock.offsetHeight - tooltip.offsetHeight;
+        }
+      
+        tooltip.style.left = x + 20 + "px";
+        tooltip.style.top = y + "px";
+    });
+        let kolBody = document.querySelector('.kols__body');
+        let koltooltip = document.querySelector('.kols__tooltip');
+        let kolCheck = false;
+        kolBody.addEventListener('mouseover', function() {
+            if(!kolCheck){
+                koltooltip.classList.add('kols__tooltip-active');
+                kolCheck = true;
+
+                setTimeout(() => {
+                    koltooltip.classList.remove('kols__tooltip-active');
+                }, 3000);
+            }
+        });
+        // kolBody.addEventListener('mouseleave', function() {
+        //     kolCheck = false;
+        // });
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -55,7 +93,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.toggle').addEventListener('click', function(event) {
         event.stopPropagation();
     
-        // Toggle 'on' class for '.header__mobile'
         var headerMobile = document.querySelector('.header__mobile');
         if (headerMobile.classList.contains('on')) {
             headerMobile.classList.remove('on');
@@ -63,7 +100,6 @@ document.addEventListener('DOMContentLoaded', function() {
             headerMobile.classList.add('on');
         }
     
-        // Toggle 'stopper' class for 'body'
         var body = document.querySelector('body');
         if (body.classList.contains('stopper')) {
             body.classList.remove('stopper');
@@ -99,9 +135,10 @@ var swiper = new Swiper(".mySwiper", {
       spaceBetween: 150,
       slidesPerView: "auto",
       slideToClickedSlide: true,
-      mousewheel: true,
+      mousewheel:{
+        forceToAxis: true,
+      },
       initialSlide: 1,
-    //   loop: true,
       coverflowEffect: {
         rotate: 20,
         stretch: 0,
@@ -124,7 +161,9 @@ var swiper2 = new Swiper(".mySwiperTwo", {
 var swiper3 = new Swiper(".mySwiperThree", {
     effect: "cards",
     initialSlide: 5,
-    mousewheel: true,
+    mousewheel:{
+        forceToAxis: true,
+      },
     cardsEffect:{
         perSlideOffset: 14,
         perSlideRotate: 4,
@@ -160,8 +199,16 @@ var swiper6 = new Swiper(".mySwiperSix", {
         clickable: true,
     },
 });
+var swiper7 = new Swiper(".mySwiperSeven", {
+    slidesPerView: 1,
+    centeredSlides: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+})
 
-var delay = 300; // 0.5 seconds
+var delay = 300;
 var timer;
 var elements = document.querySelectorAll('.education__book');
 var bookOne = document.querySelector('.education__book-one');
@@ -186,23 +233,18 @@ elements.forEach(function(elem) {
             }, 800);
         }
 
-        // Define the currently hovered element for reference in the timeout function
         var hoveredElem = this;
 
         timer = setTimeout(function() {
-            // Remove active class from all elements
             elements.forEach(function(innerElem) {
                 innerElem.classList.remove('education__book-active');
             });
 
-            // Add active class to the hovered element
             hoveredElem.classList.add('education__book-active');
         }, delay);
     });
 
     elem.addEventListener('mouseleave', function() {
-        // When the mouse leaves, just clear the timer
-        // Don't reset animations immediately; let the process complete
         clearTimeout(timer);
     });
 });
@@ -212,7 +254,6 @@ bookOne.addEventListener('mouseenter', function() {
       block.classList.remove('education__block-active');
   });
   
-  // Add active class to the first block
   blocks[0].classList.add('education__block-active');
 });
 
@@ -222,30 +263,39 @@ bookTwo.addEventListener('mouseenter', function() {
       block.classList.remove('education__block-active');
   });
   
-  // Add active class to the second block
   blocks[1].classList.add('education__block-active');
 });
 
 const heroVideo = document.querySelector('.hero__video');
 const heroPopup = document.getElementById('hero__popup');
+const heroMedia = document.getElementById('heroMedia');
 
 heroVideo.addEventListener('click', function() {
-    heroPopup.style.display = 'flex';  // Display the popup
-    setTimeout(() => heroPopup.style.opacity = '1', 50);  // Fade in the popup with a slight delay
+    var body = document.querySelector('body');
+    heroPopup.style.display = 'flex'; // Display the popup
+    setTimeout(() => heroPopup.style.opacity = '1', 50);
+    body.classList.add('stopper');
 });
 
 heroPopup.addEventListener('click', function(event) {
-    // If the clicked target is the popup wrapper (not the content inside), close the popup
     if(event.target === heroPopup) {
-        heroPopup.style.opacity = '0';  // Fade out the popup
-        setTimeout(() => heroPopup.style.display = 'none', 500);  // Hide the popup after fade out transition
+        var body = document.querySelector('body');
+        heroPopup.style.opacity = '0'; // Fade out the popup
+        setTimeout(() => heroPopup.style.display = 'none', 500);
+        heroMedia.pause();
+        heroMedia.currentTime = 0;
+        body.classList.remove('stopper');
     }
 });
 const overlay = document.querySelector('.overlay');
 
 overlay.addEventListener('click', function() {
+    var body = document.querySelector('body');
     heroPopup.style.opacity = '0';  // Fade out the popup
-    setTimeout(() => heroPopup.style.display = 'none', 500);  // Hide the popup after fade out transition
+    setTimeout(() => heroPopup.style.display = 'none', 500);
+    heroMedia.pause();
+    heroMedia.currentTime = 0;
+    body.classList.remove('stopper');
 });
 
 
