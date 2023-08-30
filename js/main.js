@@ -200,7 +200,7 @@ var swiper6 = new Swiper(".mySwiperSix", {
     },
 });
 var swiper7 = new Swiper(".mySwiperSeven", {
-    slidesPerView: 1,
+    slidesPerView: 'auto',
     centeredSlides: true,
     pagination: {
         el: ".swiper-pagination",

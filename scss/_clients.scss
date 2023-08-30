@@ -86,3 +86,9 @@
         }
     }
 }
+
+@media (max-width: 380px){
+    .clients__body img {
+        max-width: 12rem;
+    }
+}
