@@ -117,6 +117,19 @@
         max-width: 57rem;
         align-items: start;
         gap: 6rem;
+        opacity: 0;
+        transform: translateY(15rem);
+        animation: fadin 1s forwards;
+    }
+    @keyframes fadin {
+        0%{
+            opacity: 0;
+            transform: translateY(15rem);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
     &__header{
         font-size: 8rem;

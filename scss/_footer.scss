@@ -9,6 +9,41 @@
         display: flex;
         justify-content: space-between;
     }
+    &__ntop{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 7.1rem;
+    }
+    &__ntwo{
+        display: flex;
+        flex-direction: column;
+        gap: 2.1rem;
+    }
+    &__middle{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3.1rem;
+    }
+    &__nthree{
+        display: flex;
+        flex-direction: column;
+        gap: 1.8rem;
+    }
+    &__ncontacts{
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 2.4rem;
+    }
+    &__nemail,
+    &__nadress{
+        font-weight: 400;
+    }
+    &__none{
+        display: flex;
+        align-items: center;
+        gap: 3.2rem;
+    }
     &__socials{
         display: flex;
         flex-direction: column;
@@ -53,30 +88,17 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-around;
-            width: 35.2rem;
-            height: 8.8rem;
-            border-radius: 1.5rem;
-            background: linear-gradient(270deg, #41516A 0%, #080B11 7.81%, #080B11 91.67%, #41516A 100%);
-            position: relative;
-            z-index: 5;
-            &::before{
-                content: '';
-                position: absolute;
-                top: 0.1rem;
-                left: 0.1rem;
-                width: 35rem;
-                height: 8.6rem;
-                border-radius: 1.5rem;
-                z-index: -1;
-                background: #080B11;
-            }
+            gap: 2.7rem;
         }
         &-single{
+            display: flex;
+            width: 7rem;
             a{
                 position: relative;
                 display: flex;
+                width: 100%;
                 img{
+                    width: 100%;
                     transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
                     &:nth-child(2){
                         position: absolute;
@@ -98,9 +120,9 @@
         }
         &-col{
             display: flex;
-            justify-content: space-around;
+            flex-direction: column;
             align-items: center;
-            width: 100%;
+            gap: 2.7rem;
             a{
                 position: relative;
                 display: flex;
@@ -145,7 +167,7 @@
     &__link{
         color: #FFF;
         font-family: Gilroy;
-        font-size: 1.6rem;
+        font-size: 2rem;
         font-style: normal;
         font-weight: 600;
         line-height: 100%; /* 1.6rem */
@@ -177,13 +199,16 @@
         line-height: 120%;
         align-items: center;
         justify-content: space-between;
-        border-top: 1px solid #fff;
+        border-top: 1px solid #848484;
         padding-top: 2rem;
         align-items: center;
         padding-bottom: 4rem;
         &-right{
             display: flex;
             gap: 2rem;
+        }
+        &-link{
+            text-decoration: underline;
         }
     }
 }
@@ -265,6 +290,40 @@
             font-size: 1.4rem;
             font-weight: 400;
             line-height: 2.4rem;
+        }
+        &__none{
+            justify-content: center;
+            margin-bottom: 8rem;
+        }
+        &__ntwo{
+            align-items: center;
+            margin-bottom: 8rem;
+            gap: 4rem;
+        }
+        &__nthree{
+            gap: 2.4rem;
+            align-items: center;
+            margin-bottom: 8rem;
+        }
+        &__nfour,
+        &__nfive{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 8rem;
+        }
+        &__nsix{
+            display: flex;
+            justify-content: center;
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+        &__nseven{
+            display: flex;
+            justify-content: center;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 1.6rem;
         }
     }
 }

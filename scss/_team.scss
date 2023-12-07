@@ -78,6 +78,90 @@
             width: 100%;
         }
     }
+    .swiper-slide1{
+        background: url('../assets/images/bn-d-team-img1.webp') no-repeat center;
+        background-size: cover;
+    }
+    .swiper-slide2{
+        background: url('../assets/images/bn-d-team-img2.webp') no-repeat center;
+        background-size: cover;
+    }
+    .swiper-slide3{
+        background: url('../assets/images/bn-d-team-img3.webp') no-repeat center;
+        background-size: cover;
+    }
+    .swiper-slide4{
+        background: url('../assets/images/bn-d-team-img4.webp') no-repeat center;
+        background-size: cover;
+    }
+    .swiper-slide5{
+        background: url('../assets/images/bn-d-team-img5.webp') no-repeat center;
+        background-size: cover;
+    }
+    .swiper-slide6{
+        background: url('../assets/images/bn-d-team-img6.webp') no-repeat center;
+        background-size: cover;
+    }
+    .swiper-slide7{
+        background: url('../assets/images/bn-d-team-img7.webp') no-repeat center;
+        background-size: cover;
+    }
+    .swiper-slide8{
+        background: url('../assets/images/bn-d-team-img8.webp') no-repeat center;
+        background-size: cover;
+    }
+    .swiper-slide9{
+        background: url('../assets/images/bn-d-team-img9.webp') no-repeat center;
+        background-size: cover;
+    }
+    .swiper-slide10{
+        background: url('../assets/images/bn-d-team-img10.webp') no-repeat center;
+        background-size: cover;
+    }
+    .swiper-slide11{
+        background: url('../assets/images/bn-d-team-img11.webp') no-repeat center;
+        background-size: cover;
+    }
+    .swiper-slide12{
+        background: url('../assets/images/bn-d-team-img12.webp') no-repeat center;
+        background-size: cover;
+    }
+    .swiper-slide13{
+        background: url('../assets/images/bn-d-team-img13.webp') no-repeat center;
+        background-size: cover;
+    }
+    .swiper-slide14{
+        background: url('../assets/images/bn-d-team-img14.webp') no-repeat center;
+        background-size: cover;
+    }
+    .swiper-slide15{
+        background: url('../assets/images/bn-d-team-img15.webp') no-repeat center;
+        background-size: cover;
+    }
+    .swiper-slide16{
+        background: url('../assets/images/bn-d-team-img16.webp') no-repeat center;
+        background-size: cover;
+    }
+    .swiper-slide17{
+        background: url('../assets/images/bn-d-team-img17.webp') no-repeat center;
+        background-size: cover;
+    }
+    .swiper-slide18{
+        background: url('../assets/images/bn-d-team-img18.webp') no-repeat center;
+        background-size: cover;
+    }
+    .swiper-slide19{
+        background: url('../assets/images/bn-d-team-img19.webp') no-repeat center;
+        background-size: cover;
+    }
+    .swiper-slide20{
+        background: url('../assets/images/bn-d-team-img20.webp') no-repeat center;
+        background-size: cover;
+    }
+    .swiper-slide21{
+        background: url('../assets/images/bn-d-team-img21.webp') no-repeat center;
+        background-size: cover;
+    }
     .swiper-slide-active{
         .swiper-slide__name,
         .swiper-slide__position,
@@ -93,4 +177,18 @@
         filter: none;
         z-index: 99;
     }
+}
+
+@media (max-width: 1100px) {
+    .mySwiperTwo .swiper-slide{
+        height: 35rem;
+    } 
+    .mySwiperTwo .swiper-slide-active{
+        width: 30rem !important;
+        height: 45rem;
+        margin-top: -3rem;
+        margin-left: -5rem;
+        margin-right: -5rem;
+    }
+    
 }

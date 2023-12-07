@@ -8,6 +8,33 @@ main{
     overflow-x: hidden;
 }
 
+.scroll-triggered,
+.scroll-trigger-left,
+.scroll-trigger-right {
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.scroll-triggered.active,
+.scroll-trigger-left.active,
+.scroll-trigger-right.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-triggered {
+  transform: translateY(150px);
+}
+
+.scroll-trigger-left {
+  transform: translateX(-100px);
+}
+
+.scroll-trigger-right {
+  transform: translateX(100px);
+}
+
+
 body{
     font-family: 'Gilroy';
     font-weight: 600;
